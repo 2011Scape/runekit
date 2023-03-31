@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Font;
+
+import java.awt.*;
 
 public class Node_Sub46 extends Node
 {

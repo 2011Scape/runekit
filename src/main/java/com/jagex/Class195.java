@@ -333,7 +333,7 @@ public class Class195
 						buffer.method2200(CacheNode_Sub15.aLong9588, 1817671800);
 						buffer.method2226(Class209.aClass353_2483.anInt4344, false);
 						buffer.method2226((int) (9.9999999E7 * Math.random()), false);
-						buffer.method2222(0, RS2Loader.loginModulus, Class262_Sub10.aBigInteger7775);
+						buffer.method2222(0, RS2Applet.loginModulus, Class262_Sub10.aBigInteger7775);
 						node_sub13.aPacket7113.method2223(buffer.anInt7002, (byte) 4, buffer.aByteArray7019, 0);
 						node_sub13.aPacket7113.method2194(node_sub13.aPacket7113.anInt7002 - i_33_, -2887);
 					} else {

@@ -1,7 +1,8 @@
 package com.jagex;
-import java.net.InetAddress;
 
 import jagex3.jagmisc.jagmisc;
+
+import java.net.InetAddress;
 
 public class Class193 implements Runnable
 {

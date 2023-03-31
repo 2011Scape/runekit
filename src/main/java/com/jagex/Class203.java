@@ -35,7 +35,7 @@ public class Class203
 	}
 	
 	public static void method2029(int i) {
-		RS2Loader.loginModulus = null;
+		RS2Applet.loginModulus = null;
 		anIntArray2450 = null;
 		int i_12_ = -120 / ((-61 - i) / 51);
 	}

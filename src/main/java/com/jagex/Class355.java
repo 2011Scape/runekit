@@ -96,7 +96,7 @@ public class Class355
 		for (int i_1_ = 0; (i_1_ ^ 0xffffffff) > -11; i_1_++)
 			buffer.method2179((byte) -5, (int) (9.9999999E7 * Math.random()));
 		buffer.method2210((int) (Math.random() * 9.9999999E7), i ^ 0x1513);
-		buffer.method2222(0, RS2Loader.loginModulus, Class262_Sub10.aBigInteger7775);
+		buffer.method2222(0, RS2Applet.loginModulus, Class262_Sub10.aBigInteger7775);
 		node_sub13.aPacket7113.method2223(buffer.anInt7002, (byte) 4, buffer.aByteArray7019, 0);
 		return is;
 	}

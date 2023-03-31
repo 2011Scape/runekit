@@ -98,7 +98,7 @@ public class CacheNode_Sub17 extends CacheNode implements Interface2
 		}
 		buffer.method2200(Class188_Sub1_Sub2.aLong9342, 1817671800);
 		buffer.method2200(CacheNode_Sub15.aLong9588, 1817671800);
-		buffer.method2222(0, RS2Loader.loginModulus, Class262_Sub10.aBigInteger7775);
+		buffer.method2222(0, RS2Applet.loginModulus, Class262_Sub10.aBigInteger7775);
 		return buffer;
 	}
 	

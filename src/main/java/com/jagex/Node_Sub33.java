@@ -1,7 +1,7 @@
 package com.jagex;
+
 import jaclib.memory.Stream;
 import jaclib.memory.heap.NativeHeapBuffer;
-
 import jaggl.OpenGL;
 
 public class Node_Sub33 extends Node

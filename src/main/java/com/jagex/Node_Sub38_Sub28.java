@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Rectangle;
+
+import java.awt.*;
 
 public class Node_Sub38_Sub28 extends Node_Sub38
 {
@@ -73,10 +74,10 @@ public class Node_Sub38_Sub28 extends Node_Sub38
 	
 	static final void method2887(String string, String string_5_, byte b) {
 		Node_Sub38_Sub23.anInt10347 = -1;
-		Class320_Sub23.aClass123_8432 = RS2Loader.ENABLE_LOBBY ? Class218.lobbyResponseBuffer : Class218.worldResponseBuffer;
+		Class320_Sub23.aClass123_8432 = RS2Applet.ENABLE_LOBBY ? Class218.lobbyResponseBuffer : Class218.worldResponseBuffer;
 		int i = 25 / ((-17 - b) / 32);
 		anInt10398++;
-		Class159.anInt1996 = RS2Loader.ENABLE_LOBBY ? 1 : 2;
+		Class159.anInt1996 = RS2Applet.ENABLE_LOBBY ? 1 : 2;
 		Class129.method1556(false, string_5_, true, false, string);
 	}
 	

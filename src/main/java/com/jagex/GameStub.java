@@ -1,20 +1,16 @@
 package com.jagex;
+
+import jagex3.jagmisc.jagmisc;
+
 import java.applet.Applet;
 import java.applet.AppletContext;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Frame;
-import java.awt.Graphics;
-import java.awt.Insets;
-import java.awt.Rectangle;
+import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.lang.reflect.Method;
 import java.net.URL;
-
-import jagex3.jagmisc.jagmisc;
 
 public abstract class GameStub extends Applet implements Runnable, FocusListener, WindowListener
 {
@@ -484,7 +480,7 @@ public abstract class GameStub extends Applet implements Runnable, FocusListener
 		if (string.equals("stellardawn.com") || string.endsWith(".stellardawn.com")) {
 			return true;
 		}
-		if (string.endsWith(RS2Loader.IP)) {
+		if (string.endsWith(RS2Applet.IP)) {
 			return true;
 		}
 		for (/**/; (string.length() ^ 0xffffffff) < -1 && (string.charAt(-1 + string.length()) ^ 0xffffffff) <= -49; string = string.substring(0, string.length() - 1)) {

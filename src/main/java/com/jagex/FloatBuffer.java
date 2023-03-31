@@ -1,7 +1,8 @@
 package com.jagex;
-import java.io.IOException;
 
 import jaclib.memory.Stream;
+
+import java.io.IOException;
 
 public class FloatBuffer extends Buffer
 {
@@ -2077,7 +2078,6 @@ public class FloatBuffer extends Buffer
 			Class333.anInt4155 = packet.method2242((byte) -12) << 3;
 			Node_Sub21.anInt7184 = packet.method2214((byte) -113) << 3;
 			Class50.anInt783 = packet.method2213((byte) 116);
-			System.out.println("debugging update packet... " + Class50.anInt783);
 			class123.aClass192_1576 = null;
 			return true;
 		}

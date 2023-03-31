@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Color;
+
+import java.awt.*;
 
 public class Class150_Sub1 extends Class150
 {

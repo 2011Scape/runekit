@@ -1,7 +1,6 @@
 package com.jagex;
-import java.awt.Frame;
-import java.awt.Insets;
-import java.awt.Rectangle;
+
+import java.awt.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.net.Socket;
@@ -1751,15 +1750,15 @@ public class client extends GameStub
 		if (Node_Sub38_Sub1.aClass329_10086 == Class240.aClass329_2943) {
 			Class320_Sub24.aClass197_8443.aString2422 = this.getCodeBase().getHost();
 		} else if (Node_Sub13.method2548(false, Node_Sub38_Sub1.aClass329_10086)) {
-			Class320_Sub24.aClass197_8443.aString2422 = RS2Loader.IP;
+			Class320_Sub24.aClass197_8443.aString2422 = RS2Applet.IP;
 			Class320_Sub24.aClass197_8443.anInt2417 = Class320_Sub24.aClass197_8443.worldId + 40000;
 			Class320_Sub24.aClass197_8443.worldPort = Class320_Sub24.aClass197_8443.worldId + 50000;
 			Node_Sub15_Sub13.aClass197_9871.anInt2417 = Node_Sub15_Sub13.aClass197_9871.worldId + 40000;
 			Node_Sub15_Sub13.aClass197_9871.worldPort = 50000 + Node_Sub15_Sub13.aClass197_9871.worldId;
 		} else if (CacheNode_Sub2.aClass329_9436 == Node_Sub38_Sub1.aClass329_10086) {
-			Class320_Sub24.aClass197_8443.aString2422 = RS2Loader.IP;
+			Class320_Sub24.aClass197_8443.aString2422 = RS2Applet.IP;
 			Class320_Sub24.aClass197_8443.anInt2417 = 40000 - -Class320_Sub24.aClass197_8443.worldId;
-			Node_Sub15_Sub13.aClass197_9871.aString2422 = RS2Loader.IP;
+			Node_Sub15_Sub13.aClass197_9871.aString2422 = RS2Applet.IP;
 			Class320_Sub24.aClass197_8443.worldPort = Class320_Sub24.aClass197_8443.worldId + 50000;
 			Node_Sub15_Sub13.aClass197_9871.anInt2417 = Node_Sub15_Sub13.aClass197_9871.worldId + 40000;
 			Node_Sub15_Sub13.aClass197_9871.worldPort = 50000 + Node_Sub15_Sub13.aClass197_9871.worldId;

@@ -10,7 +10,8 @@ import javax.swing.JLabel
  * @author Alycia <https://github.com/alycii>
  */
 
-val backgroundColor = Color.decode("#181818")
+val borderColor: Color = Color.decode("#49422d")
+val backgroundColor: Color = Color.decode("#181818")
 var frameDimensions = Dimension(1050, 542)
 
 fun buildIcon(location: String, width: Int, height: Int, x: Int = 0, y: Int = 0) : JLabel {

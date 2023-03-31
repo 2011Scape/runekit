@@ -106,7 +106,7 @@ public class Node_Sub38_Sub32 extends Node_Sub38
 	public static void method2895(boolean bool) {
 		if (bool == true) {
 			aClass192_10433 = null;
-			RS2Loader.js5Modulus = null;
+			RS2Applet.js5Modulus = null;
 		}
 	}
 	

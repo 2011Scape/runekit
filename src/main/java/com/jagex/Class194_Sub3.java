@@ -86,7 +86,7 @@ class Class194_Sub3 extends Class194
 		}
 		if (Class110.aClass110_1390 == Class252.aClass110_3189) {
 			if (Class144_Sub1.aClass232_6802 == null) {
-				Class144_Sub1.aClass232_6802 = new Class232(Class267.aClass266_3449, Class320_Sub1.aClass141_8207, Class239.aBigInteger2924, RS2Loader.js5Modulus);
+				Class144_Sub1.aClass232_6802 = new Class232(Class267.aClass266_3449, Class320_Sub1.aClass141_8207, Class239.aBigInteger2924, RS2Applet.js5Modulus);
 			}
 			if (!Class144_Sub1.aClass232_6802.method2136(255)) {
 				return 0;

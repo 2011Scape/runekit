@@ -42,7 +42,7 @@ abstract class Animable_Sub2 extends Animable
 	}
 	
 	static final void method836(int i, boolean bool) {
-		if(RS2Loader.ENABLE_LOBBY) {
+		if(RS2Applet.ENABLE_LOBBY) {
 			anInt9108++;
 			if (Class159.anInt1996 != 1) {
 				if ((Class159.anInt1996 ^ 0xffffffff) == -3) {

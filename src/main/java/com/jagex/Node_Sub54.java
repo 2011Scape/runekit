@@ -1,9 +1,10 @@
 package com.jagex;
-import java.awt.Dimension;
-import java.io.IOException;
 
 import jaclib.memory.Stream;
 import jaclib.memory.heap.NativeHeapBuffer;
+
+import java.awt.*;
+import java.io.IOException;
 
 public class Node_Sub54 extends Node
 {

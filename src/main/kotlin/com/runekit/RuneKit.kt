@@ -1,14 +1,17 @@
 package com.runekit
 
-import com.runekit.panels.AppletPanel
-import com.runekit.panels.NavigationPanel
-import com.runekit.panels.InformationPanel
+import com.runekit.panels.Applet
+import com.runekit.panels.Information
+import com.runekit.panels.Navigation
+import com.runekit.panels.Title
 import org.ngrinder.recorder.ui.component.ComponentResizer
 import java.awt.CardLayout
+import java.awt.Color
 import java.awt.Dimension
 import java.awt.Insets
 import java.awt.event.ComponentAdapter
 import java.awt.event.ComponentEvent
+import javax.swing.BorderFactory
 import javax.swing.JFrame
 import javax.swing.JPanel
 
@@ -29,7 +32,7 @@ class RuneKit : JFrame() {
     private val framePanels = mutableListOf<JPanel>()
 
     // Applet panel
-    private val applet = AppletPanel()
+    private val applet = Applet()
 
     // Main content panel for the frame
     private val content = JPanel(CardLayout()).apply {
@@ -55,6 +58,7 @@ class RuneKit : JFrame() {
         isUndecorated = true
         size = frameDimensions
         minimumSize = frameDimensions
+        content.border = BorderFactory.createLineBorder(Color.decode("#49422d"))
         setLocationRelativeTo(null)
         isVisible = true
 
@@ -89,8 +93,9 @@ class RuneKit : JFrame() {
      */
     private fun rebuildPanels() {
         framePanels.clear()
-        framePanels.add(NavigationPanel())
-        framePanels.add(InformationPanel())
+        framePanels.add(Title())
+        framePanels.add(Navigation())
+        framePanels.add(Information())
         framePanels.forEach(content::add)
     }
 
