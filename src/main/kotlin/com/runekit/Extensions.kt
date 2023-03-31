@@ -10,8 +10,8 @@ import javax.swing.JLabel
  * @author Alycia <https://github.com/alycii>
  */
 
-val BACKGROUND_COLOR = Color.decode("#181818")
-var MAIN_FRAME_SIZE = Dimension(1050, 530)
+val backgroundColor = Color.decode("#181818")
+var frameDimensions = Dimension(1050, 542)
 
 fun buildIcon(location: String, width: Int, height: Int, x: Int = 0, y: Int = 0) : JLabel {
     val background = JLabel()
@@ -23,6 +23,6 @@ fun buildIcon(location: String, width: Int, height: Int, x: Int = 0, y: Int = 0)
 
 fun resizeIcon(icon: ImageIcon, width: Int, height: Int): ImageIcon? {
     val img = icon.image
-    val resizedImg = img.getScaledInstance(width, height, Image.SCALE_SMOOTH)
+    val resizedImg = img.getScaledInstance(width, height, Image.SCALE_DEFAULT)
     return ImageIcon(resizedImg)
 }

@@ -1,8 +1,10 @@
 package com.runekit
 
+import com.runekit.panels.AppletPanel
 import com.runekit.panels.NavigationPanel
 import com.runekit.panels.InformationPanel
 import org.ngrinder.recorder.ui.component.ComponentResizer
+import java.awt.CardLayout
 import java.awt.Dimension
 import java.awt.Insets
 import java.awt.event.ComponentAdapter
@@ -13,6 +15,8 @@ import javax.swing.JPanel
 /**
  * @author Alycia <https://github.com/alycii>
  */
+
+
 /**
  * The main application frame for the RuneKit application.
  *
@@ -24,9 +28,12 @@ class RuneKit : JFrame() {
     // List of main panels
     private val framePanels = mutableListOf<JPanel>()
 
+    // Applet panel
+    private val applet = AppletPanel()
+
     // Main content panel for the frame
-    private val content = JPanel().apply {
-        background = BACKGROUND_COLOR
+    private val content = JPanel(CardLayout()).apply {
+        background = backgroundColor
         layout = null
     }
 
@@ -40,11 +47,14 @@ class RuneKit : JFrame() {
         contentPane = content
         rebuildPanels()
 
+        // Add the game applet
+        content.add(applet)
+
         // Set the frame defaults
         title = "2011Scape - Powered by RuneKit"
         isUndecorated = true
-        size = MAIN_FRAME_SIZE
-        minimumSize = MAIN_FRAME_SIZE
+        size = frameDimensions
+        minimumSize = frameDimensions
         setLocationRelativeTo(null)
         isVisible = true
 
@@ -58,6 +68,7 @@ class RuneKit : JFrame() {
         addComponentListener(object : ComponentAdapter() {
             override fun componentResized(e: ComponentEvent?) {
                 rebuildMain()
+                applet.refresh()
             }
         })
 
@@ -67,11 +78,9 @@ class RuneKit : JFrame() {
      * Rebuilds the main frame when the frame size changes.
      */
     private fun rebuildMain() {
-        MAIN_FRAME_SIZE = Dimension(width, height)
-        content.removeAll()
+        frameDimensions = Dimension(width, height)
+        content.components.filter { it != applet }.forEach(content::remove)
         rebuildPanels()
-        repaint()
-        revalidate()
     }
 
     /**
@@ -84,6 +93,5 @@ class RuneKit : JFrame() {
         framePanels.add(InformationPanel())
         framePanels.forEach(content::add)
     }
-
 
 }

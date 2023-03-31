@@ -1,7 +1,7 @@
 package com.runekit.panels
 
-import com.runekit.BACKGROUND_COLOR
-import com.runekit.MAIN_FRAME_SIZE
+import com.runekit.backgroundColor
+import com.runekit.frameDimensions
 import com.runekit.buildIcon
 import java.awt.Dimension
 import javax.swing.JPanel
@@ -17,10 +17,10 @@ class InformationPanel : JPanel() {
         // The y offset is based on the navigation bar height
         val offsetY = 30
 
-        setBounds(MAIN_FRAME_SIZE.width - originalSize.width, offsetY, originalSize.width, MAIN_FRAME_SIZE.height - offsetY)
-        background = BACKGROUND_COLOR
+        setBounds(frameDimensions.width - originalSize.width, offsetY, originalSize.width, frameDimensions.height - offsetY)
+        background = backgroundColor
         layout = null
-        add(buildIcon("/side-bar.png", width, MAIN_FRAME_SIZE.height - 30))
+        add(buildIcon("/side-bar.png", width, frameDimensions.height - 30))
         isVisible = true
     }
 

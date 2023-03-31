@@ -1,7 +1,7 @@
 package com.runekit.panels
 
-import com.runekit.BACKGROUND_COLOR
-import com.runekit.MAIN_FRAME_SIZE
+import com.runekit.backgroundColor
+import com.runekit.frameDimensions
 import com.runekit.buildIcon
 import javax.swing.JPanel
 
@@ -11,9 +11,9 @@ import javax.swing.JPanel
  */
 class NavigationPanel : JPanel() {
     init {
-        val width = MAIN_FRAME_SIZE.width
+        val width = frameDimensions.width
         setBounds(0, 0, width, 30)
-        background = BACKGROUND_COLOR
+        background = backgroundColor
         layout = null
         add(buildIcon("/menu-bar.png", width, 30))
         isVisible = true
