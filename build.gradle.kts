@@ -12,6 +12,7 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation(files("lib/ComponentResizer.jar"))
 }
 
 tasks.test {

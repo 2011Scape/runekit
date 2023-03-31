@@ -9,7 +9,7 @@ import javax.swing.JPanel
 /**
  * @author Alycia <https://github.com/alycii>
  */
-class NavigationBar : JPanel() {
+class NavigationPanel : JPanel() {
     init {
         val width = MAIN_FRAME_SIZE.width
         setBounds(0, 0, width, 30)
