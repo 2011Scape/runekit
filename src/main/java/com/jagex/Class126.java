@@ -1,8 +1,9 @@
 package com.jagex;
-import java.io.File;
-import java.io.FileOutputStream;
 
 import jagex3.jagmisc.jagmisc;
+
+import java.io.File;
+import java.io.FileOutputStream;
 
 public class Class126
 {

@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Graphics;
+
+import java.awt.*;
 
 abstract class GraphicsBuffer extends Node
 {

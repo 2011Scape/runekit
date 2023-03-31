@@ -1,12 +1,11 @@
 package com.jagex;
-import java.awt.Frame;
 
-import com.ms.awt.WComponentPeer;
 import com.ms.com.IUnknown;
 import com.ms.directX.DDSurfaceDesc;
 import com.ms.directX.DirectDraw;
 import com.ms.directX.IEnumModesCallback;
-import com.ms.win32.User32;
+
+import java.awt.*;
 
 public class Class11 implements IEnumModesCallback
 {

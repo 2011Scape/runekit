@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Image;
+
+import java.awt.*;
 
 public class Class54
 {

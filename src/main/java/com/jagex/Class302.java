@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Dimension;
+
+import java.awt.*;
 
 public class Class302
 {

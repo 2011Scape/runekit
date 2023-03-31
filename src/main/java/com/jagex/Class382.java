@@ -1,7 +1,8 @@
 package com.jagex;
-import java.awt.Color;
 
 import jaggl.OpenGL;
+
+import java.awt.*;
 
 public class Class382 implements Interface11
 {

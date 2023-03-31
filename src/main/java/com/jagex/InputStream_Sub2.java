@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Dimension;
+
+import java.awt.*;
 import java.io.InputStream;
 
 public class InputStream_Sub2 extends InputStream

@@ -1,6 +1,6 @@
 package com.jagex;
-import java.awt.Dimension;
-import java.awt.Insets;
+
+import java.awt.*;
 
 class Class194
 {

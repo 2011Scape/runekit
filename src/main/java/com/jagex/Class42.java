@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Component;
+
+import java.awt.*;
 
 class Class42
 {

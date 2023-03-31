@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Component;
+
+import java.awt.*;
 
 public class Class262_Sub22 extends Class262
 {

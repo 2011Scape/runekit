@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Component;
+
+import java.awt.*;
 
 public class Class42_Sub2 extends Class42
 {

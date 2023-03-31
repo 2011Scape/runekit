@@ -1548,7 +1548,6 @@ public class FloatBuffer extends Buffer
 				song = -1;
 			}
 			int volume = packet.method2238(true);
-			System.err.println("delay: " + delay + ", song: " + song + ", vol: " + volume);
 			Class40.method432(volume, 114, song, delay);
 			class123.aClass192_1576 = null;
 			return true;

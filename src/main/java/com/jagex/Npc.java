@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Insets;
+
+import java.awt.*;
 
 public class Npc extends Actor
 {

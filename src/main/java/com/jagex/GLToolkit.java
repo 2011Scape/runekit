@@ -1,14 +1,13 @@
 package com.jagex;
-import java.awt.Dimension;
-import java.awt.Rectangle;
-import java.lang.reflect.Method;
-import java.util.Enumeration;
-import java.util.Hashtable;
 
 import jaclib.memory.Stream;
 import jaclib.memory.heap.NativeHeap;
-
 import jaggl.OpenGL;
+
+import java.awt.*;
+import java.lang.reflect.Method;
+import java.util.Enumeration;
+import java.util.Hashtable;
 
 public class GLToolkit extends GraphicsToolkit
 {

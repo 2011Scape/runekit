@@ -1,7 +1,6 @@
 package com.jagex;
-import java.awt.Image;
-import java.awt.MediaTracker;
-import java.awt.Toolkit;
+
+import java.awt.*;
 import java.awt.image.PixelGrabber;
 
 public class Class97

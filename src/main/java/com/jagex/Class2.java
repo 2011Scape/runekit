@@ -1,7 +1,8 @@
 package com.jagex;
-import java.applet.Applet;
 
 import netscape.javascript.JSObject;
+
+import java.applet.Applet;
 
 public class Class2
 {

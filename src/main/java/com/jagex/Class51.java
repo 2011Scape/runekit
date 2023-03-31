@@ -1,7 +1,7 @@
 package com.jagex;
+
 import jaclib.memory.Source;
 import jaclib.memory.heap.NativeHeapBuffer;
-
 import jaggl.MapBuffer;
 import jaggl.OpenGL;
 

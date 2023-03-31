@@ -1,8 +1,9 @@
 package com.jagex;
-import java.util.Calendar;
-import java.util.TimeZone;
 
 import jaggl.OpenGL;
+
+import java.util.Calendar;
+import java.util.TimeZone;
 
 public class Class247
 {

@@ -1,24 +1,9 @@
 package com.jagex;
-import java.awt.Dimension;
-import java.awt.Rectangle;
 
 import jaclib.peer.ti;
+import jagdx.*;
 
-import jagdx.D3DADAPTER_IDENTIFIER;
-import jagdx.D3DCAPS;
-import jagdx.D3DDISPLAYMODE;
-import jagdx.D3DLIGHT;
-import jagdx.D3DPRESENT_PARAMETERS;
-import jagdx.GeometryBuffer;
-import jagdx.IDirect3D;
-import jagdx.IDirect3DDevice;
-import jagdx.IDirect3DEventQuery;
-import jagdx.IDirect3DPixelShader;
-import jagdx.IDirect3DSurface;
-import jagdx.IDirect3DVertexShader;
-import jagdx.PixelBuffer;
-import jagdx.lh;
-import jagdx.sja;
+import java.awt.*;
 
 public class D3DToolkit extends AbstractToolkit
 {

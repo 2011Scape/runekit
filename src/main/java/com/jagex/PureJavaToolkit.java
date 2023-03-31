@@ -1,7 +1,6 @@
 package com.jagex;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Rectangle;
+
+import java.awt.*;
 
 public class PureJavaToolkit extends GraphicsToolkit
 {

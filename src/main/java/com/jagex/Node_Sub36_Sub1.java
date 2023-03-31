@@ -1,7 +1,6 @@
 package com.jagex;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Insets;
+
+import java.awt.*;
 
 public class Node_Sub36_Sub1 extends Node_Sub36
 {

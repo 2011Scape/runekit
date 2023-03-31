@@ -1,6 +1,6 @@
 package com.jagex;
-import jaclib.memory.Source;
 
+import jaclib.memory.Source;
 import jagdx.IDirect3DVertexBuffer;
 import jagdx.lh;
 

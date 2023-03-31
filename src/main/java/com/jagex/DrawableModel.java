@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Frame;
+
+import java.awt.*;
 
 abstract class DrawableModel
 {

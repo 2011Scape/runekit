@@ -1,8 +1,9 @@
 package com.jagex;
-import java.awt.Frame;
 
 import jagtheora.ogg.OggPacket;
 import jagtheora.ogg.OggStreamState;
+
+import java.awt.*;
 
 public class Node_Sub25_Sub4 extends Node_Sub25
 {

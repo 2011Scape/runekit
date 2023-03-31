@@ -1,7 +1,6 @@
 package com.jagex;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Graphics;
+
+import java.awt.*;
 
 public class Canvas extends java.awt.Canvas
 {

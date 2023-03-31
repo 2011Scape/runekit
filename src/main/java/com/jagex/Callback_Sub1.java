@@ -1,9 +1,6 @@
 package com.jagex;
-import java.awt.Component;
 
-import com.ms.awt.WComponentPeer;
 import com.ms.dll.Callback;
-import com.ms.dll.Root;
 import com.ms.win32.User32;
 
 public class Callback_Sub1 extends Callback

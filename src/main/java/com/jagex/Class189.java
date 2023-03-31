@@ -1,10 +1,11 @@
 package com.jagex;
-import java.io.IOException;
 
 import jagtheora.ogg.OggPacket;
 import jagtheora.ogg.OggPage;
 import jagtheora.ogg.OggStreamState;
 import jagtheora.ogg.OggSyncState;
+
+import java.io.IOException;
 
 abstract class Class189
 {

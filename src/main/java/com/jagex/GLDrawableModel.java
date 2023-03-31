@@ -1,9 +1,9 @@
 package com.jagex;
-import java.awt.Color;
 
 import jaclib.memory.Stream;
-
 import jaggl.OpenGL;
+
+import java.awt.*;
 
 public class GLDrawableModel extends DrawableModel
 {

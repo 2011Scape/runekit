@@ -1,7 +1,8 @@
 package com.jagex;
-import java.awt.Rectangle;
 
 import jaggl.OpenGL;
+
+import java.awt.*;
 
 public class Class134_Sub4 extends Class134 implements Interface13_Impl1
 {

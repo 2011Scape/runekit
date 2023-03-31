@@ -1,6 +1,6 @@
 package com.jagex;
-import java.awt.Dimension;
-import java.awt.Rectangle;
+
+import java.awt.*;
 
 public class p extends Node implements Interface3
 {

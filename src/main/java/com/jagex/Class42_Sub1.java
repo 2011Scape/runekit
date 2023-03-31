@@ -1,12 +1,7 @@
 package com.jagex;
-import java.awt.Component;
 
-import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.DataLine;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.Mixer;
-import javax.sound.sampled.SourceDataLine;
+import javax.sound.sampled.*;
+import java.awt.*;
 
 public class Class42_Sub1 extends Class42
 {

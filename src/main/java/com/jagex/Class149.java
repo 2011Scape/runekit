@@ -1,12 +1,9 @@
 package com.jagex;
-import java.awt.Component;
 
 import com.ms.com.ComFailException;
-import com.ms.directX.DSBufferDesc;
-import com.ms.directX.DSCursors;
-import com.ms.directX.DirectSound;
-import com.ms.directX.DirectSoundBuffer;
-import com.ms.directX.WaveFormatEx;
+import com.ms.directX.*;
+
+import java.awt.*;
 
 public class Class149 implements Interface5
 {

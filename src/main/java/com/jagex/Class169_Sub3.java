@@ -1,7 +1,8 @@
 package com.jagex;
-import java.util.Random;
 
 import jaggl.OpenGL;
+
+import java.util.Random;
 
 public class Class169_Sub3 extends Class169
 {

@@ -1,6 +1,6 @@
 package com.jagex;
-import jaclib.memory.Stream;
 
+import jaclib.memory.Stream;
 import jaggl.OpenGL;
 
 public class GLPlane extends Plane

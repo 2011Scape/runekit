@@ -1,5 +1,6 @@
 package com.jagex;
-import java.awt.Frame;
+
+import java.awt.*;
 
 public class r_Sub2 extends r
 {

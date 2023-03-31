@@ -1,6 +1,6 @@
 package com.jagex;
-import java.awt.Dimension;
-import java.awt.Rectangle;
+
+import java.awt.*;
 import java.lang.reflect.Method;
 
 public class oa extends GraphicsToolkit implements Interface3

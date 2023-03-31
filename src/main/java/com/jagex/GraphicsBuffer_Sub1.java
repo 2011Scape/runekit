@@ -16,7 +16,7 @@ public class GraphicsBuffer_Sub1 extends GraphicsBuffer
 	private Rectangle aRectangle9877;
 	private Shape aShape9878;
 	private java.awt.Canvas aCanvas9879;
-	
+
 	final void method2597(int i, int i_0_, int i_1_, boolean bool, Graphics graphics, int i_2_, int i_3_, int i_4_) {
 		aShape9878 = graphics.getClip();
 		aRectangle9877.height = i_2_;
@@ -30,7 +30,7 @@ public class GraphicsBuffer_Sub1 extends GraphicsBuffer
 			aCanvas9879 = null;
 		}
 	}
-	
+
 	final void method2595(boolean bool, int i, int i_5_, java.awt.Canvas canvas) {
 		aCanvas9879 = canvas;
 		aRectangle9877 = new Rectangle();
@@ -43,9 +43,9 @@ public class GraphicsBuffer_Sub1 extends GraphicsBuffer
 		DataBufferInt databufferint = new DataBufferInt(anIntArray7145, anIntArray7145.length);
 		DirectColorModel directcolormodel = new DirectColorModel(32, 16711680, 65280, 255);
 		WritableRaster writableraster = Raster.createWritableRaster(directcolormodel.createCompatibleSampleModel(anInt7146, anInt7142), databufferint, null);
-		anImage9876 = new BufferedImage(directcolormodel, writableraster, false, new Hashtable());
+		anImage9876 = new BufferedImage(directcolormodel, writableraster, false, new Hashtable<>());
 	}
-	
+
 	GraphicsBuffer_Sub1() {
 		/* empty */
 	}
