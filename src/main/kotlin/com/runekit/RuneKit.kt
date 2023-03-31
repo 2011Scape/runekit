@@ -37,6 +37,7 @@ class RuneKit : JFrame() {
     // Main content panel for the frame
     private val content = JPanel(CardLayout()).apply {
         background = backgroundColor
+        border = BorderFactory.createLineBorder(Color.decode("#49422d"))
         layout = null
     }
 
@@ -58,7 +59,6 @@ class RuneKit : JFrame() {
         isUndecorated = true
         size = frameDimensions
         minimumSize = frameDimensions
-        content.border = BorderFactory.createLineBorder(Color.decode("#49422d"))
         setLocationRelativeTo(null)
         isVisible = true
 
