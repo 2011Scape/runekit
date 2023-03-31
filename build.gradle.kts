@@ -13,6 +13,7 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     implementation(files("lib/ComponentResizer.jar"))
+    implementation(files("lib/rs2-client-graphics.jar"))
 }
 
 tasks.test {
