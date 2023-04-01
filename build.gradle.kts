@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm") version "1.8.0"
     application
+    id("com.github.johnrengelman.shadow") version "7.0.0"
 }
 
 group = "org.example"
@@ -11,7 +12,6 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
     implementation(files("lib/ComponentResizer.jar"))
     implementation(files("lib/rs2-client-graphics.jar"))
     implementation("org.swinglabs.swingx:swingx-all:1.6.5-1")
@@ -26,5 +26,12 @@ kotlin {
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("com.runekit.MainKt")
+}
+
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "com.runekit.MainKt"
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
