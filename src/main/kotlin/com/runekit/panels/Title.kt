@@ -7,7 +7,9 @@ import java.awt.Point
 import java.awt.event.MouseAdapter
 import java.awt.event.MouseEvent
 import java.awt.event.MouseMotionAdapter
+import javax.swing.JFrame
 import javax.swing.SwingUtilities
+import kotlin.system.exitProcess
 
 
 /**
@@ -36,11 +38,52 @@ object Title {
                 foreground = Color.decode("#c8bd9e")
             }
 
-            button(icon("/close.png"), icon("/close-hover.png")) {
+            button(icon("/title-bar/close.png"), icon("/title-bar/close-hover.png")) {
                 bounds = bounds.apply {
                     x = frameDimensions.width - 30
+                    y = 7
+                }
+                addActionListener {
+                    exitProcess(0)
+                }
+            }
+
+            button(icon("/title-bar/maximize.png"), icon("/title-bar/maximize-hover.png")) {
+                bounds = bounds.apply {
+                    x = frameDimensions.width - 55
+                    y = 7
+                }
+            }
+
+            button(icon("/title-bar/minimize.png"), icon("/title-bar/minimize-hover.png")) {
+                bounds = bounds.apply {
+                    x = frameDimensions.width - 80
+                    y = 7
+                }
+                addActionListener {
+                    SwingUtilities.getWindowAncestor(this@panel)?.let { window ->
+                        if (window is JFrame) {
+                            window.extendedState = JFrame.ICONIFIED
+                        }
+                    }
+                }
+            }
+
+            button(icon("/title-bar/plugin.png"), icon("/title-bar/plugin-hover.png")) {
+                bounds = bounds.apply {
+                    x = frameDimensions.width - 105
                     y = 6
                 }
+
+                icon = when(pluginView) {
+                    true -> flipIcon(icon)
+                    false -> icon
+                }
+                rolloverIcon = when(pluginView) {
+                    true -> flipIcon(rolloverIcon)
+                    false -> rolloverIcon
+                }
+
                 addActionListener {
                     pluginView = !pluginView
                     manuallyResizing = false

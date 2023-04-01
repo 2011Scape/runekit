@@ -55,6 +55,7 @@ object RuneKit : JFrame() {
             height = 540
         }
         setLocationRelativeTo(null)
+        defaultCloseOperation = EXIT_ON_CLOSE
         isVisible = true
 
 

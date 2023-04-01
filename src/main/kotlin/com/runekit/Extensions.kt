@@ -5,10 +5,11 @@ import org.jdesktop.swingx.JXPanel
 import java.awt.Color
 import java.awt.Dimension
 import java.awt.Image
-import javax.swing.BorderFactory
-import javax.swing.ImageIcon
-import javax.swing.JButton
-import javax.swing.JLabel
+import java.awt.geom.AffineTransform
+import java.awt.image.AffineTransformOp
+import java.awt.image.BufferedImage
+import javax.swing.*
+
 
 /**
  * @author Alycia <https://github.com/alycii>
@@ -71,4 +72,27 @@ fun JXPanel.button(icon: ImageIcon, rolloverIcon: ImageIcon, init: JButton.() ->
     add(button)
     init(button)
     return button
+}
+
+
+fun flipIcon(icon: Icon) : Icon {
+    val image = (icon as ImageIcon).image
+    val newIcon = ImageIcon(
+        image.getScaledInstance(
+            icon.getIconWidth(),
+            icon.getIconHeight(),
+            Image.SCALE_DEFAULT
+        )
+    )
+    newIcon.image = createFlippedImage(image)
+    return newIcon
+}
+fun createFlippedImage(image: Image): Image {
+    val bufferedImage = BufferedImage(image.getWidth(null), image.getHeight(null), BufferedImage.TYPE_INT_ARGB)
+    val g = bufferedImage.createGraphics()
+    g.drawImage(image, 0, 0, image.getWidth(null), image.getHeight(null), null)
+    val tx = AffineTransform.getScaleInstance(-1.0, 1.0)
+    tx.translate(-image.getWidth(null).toDouble(), 0.0)
+    val op = AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR)
+    return op.filter(bufferedImage, null)
 }
