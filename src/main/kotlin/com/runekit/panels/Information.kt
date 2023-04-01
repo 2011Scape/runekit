@@ -5,13 +5,10 @@ import com.runekit.panel
 import org.jdesktop.swingx.JXPanel
 import java.awt.Dimension
 
-/**
- * @author Alycia <https://github.com/alycii>
- */
-
 
 /**
  * A custom JPanel that displays information.
+ * @author Alycia <https://github.com/alycii>
  */
 object Information {
 

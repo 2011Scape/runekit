@@ -11,13 +11,9 @@ import javax.swing.BorderFactory
 import javax.swing.JPanel
 
 /**
- * @author Alycia <https://github.com/alycii>
- */
-
-
-/**
  * This class represents a JPanel that contains a Java applet. It includes functionality to refresh the applet when the
  * panel is resized.
+ * @author Alycia <https://github.com/alycii>
  */
 class Applet : JPanel() {
 

@@ -12,16 +12,14 @@ import java.awt.event.ComponentEvent
 import javax.swing.JFrame
 import javax.swing.JPanel
 
-/**
- * @author Alycia <https://github.com/alycii>
- */
-
 
 /**
  * The main application frame for the RuneKit application.
  *
  * This frame contains the main panels that make up the application.
  * It is responsible for handling resize events, rebuilding the UI when the frame size changes.
+ *
+ * @author Alycia <https://github.com/alycii>
  */
 object RuneKit : JFrame() {
 

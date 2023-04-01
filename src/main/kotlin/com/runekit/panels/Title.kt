@@ -13,33 +13,41 @@ import javax.swing.JFrame
 import javax.swing.SwingUtilities
 import kotlin.system.exitProcess
 
-
 /**
+ * The title bar for the main application frame.
  * @author Alycia <https://github.com/alycii>
  */
 object Title {
 
-    private const val panelHeight: Int = 30
+    private const val PANEL_HEIGHT = 30
 
     private var dragOffset: Point? = null
 
+    /**
+     * Builds the title bar panel with all necessary components.
+     *
+     * @return the built title bar panel
+     */
     fun build(): JXPanel {
         return panel {
+            // Set bounds for the panel
             bounds = bounds.apply {
                 width = frameDimensions.width
-                height = panelHeight
+                height = PANEL_HEIGHT
             }
 
+            // Add the label for the application title
             label {
                 text = appTitle
                 bounds = bounds.apply {
                     x = 15
                     width = frameDimensions.width
-                    height = panelHeight
+                    height = PANEL_HEIGHT
                 }
                 foreground = Color.decode("#c8bd9e")
             }
 
+            // Add the close button
             button(icon("/title-bar/close.png"), icon("/title-bar/close-hover.png")) {
                 bounds = bounds.apply {
                     x = frameDimensions.width - 30
@@ -50,6 +58,7 @@ object Title {
                 }
             }
 
+            // Add the maximize button
             button(icon("/title-bar/maximize.png"), icon("/title-bar/maximize-hover.png")) {
                 bounds = bounds.apply {
                     x = frameDimensions.width - 55
@@ -57,6 +66,7 @@ object Title {
                 }
             }
 
+            // Add the minimize button
             button(icon("/title-bar/minimize.png"), icon("/title-bar/minimize-hover.png")) {
                 bounds = bounds.apply {
                     x = frameDimensions.width - 80
@@ -71,6 +81,7 @@ object Title {
                 }
             }
 
+            // Add the divider label
             label {
                 text = "."
                 bounds = bounds.apply {
@@ -79,23 +90,19 @@ object Title {
                     width = 5
                     height = 20
                 }
-                foreground = Color.decode("#ffffff")
+                foreground = Color.decode("#c8bd9e")
             }
 
+            // Add the plugin button
             button(icon("/title-bar/plugin.png"), icon("/title-bar/plugin-hover.png")) {
                 bounds = bounds.apply {
                     x = frameDimensions.width - 120
                     y = 6
                 }
 
-                icon = when(pluginView) {
-                    true -> flipIcon(icon)
-                    false -> icon
-                }
-                rolloverIcon = when(pluginView) {
-                    true -> flipIcon(rolloverIcon)
-                    false -> rolloverIcon
-                }
+                // Flip the icon if the plugin view is currently enabled
+                icon = if (pluginView) flipIcon(icon) else icon
+                rolloverIcon = if (pluginView) flipIcon(rolloverIcon) else rolloverIcon
 
                 addActionListener {
                     pluginView = !pluginView
@@ -104,6 +111,7 @@ object Title {
                 }
             }
 
+            // Add the Discord button
             button(icon("/title-bar/discord.png"), icon("/title-bar/discord-hover.png")) {
                 bounds = bounds.apply {
                     x = frameDimensions.width - 145
