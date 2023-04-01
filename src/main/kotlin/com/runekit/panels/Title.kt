@@ -3,10 +3,12 @@ package com.runekit.panels
 import com.runekit.*
 import org.jdesktop.swingx.JXPanel
 import java.awt.Color
+import java.awt.Desktop
 import java.awt.Point
 import java.awt.event.MouseAdapter
 import java.awt.event.MouseEvent
 import java.awt.event.MouseMotionAdapter
+import java.net.URI
 import javax.swing.JFrame
 import javax.swing.SwingUtilities
 import kotlin.system.exitProcess
@@ -69,9 +71,20 @@ object Title {
                 }
             }
 
+            label {
+                text = "."
+                bounds = bounds.apply {
+                    x = frameDimensions.width - 95
+                    y = 2
+                    width = 5
+                    height = 20
+                }
+                foreground = Color.decode("#ffffff")
+            }
+
             button(icon("/title-bar/plugin.png"), icon("/title-bar/plugin-hover.png")) {
                 bounds = bounds.apply {
-                    x = frameDimensions.width - 105
+                    x = frameDimensions.width - 120
                     y = 6
                 }
 
@@ -88,6 +101,16 @@ object Title {
                     pluginView = !pluginView
                     manuallyResizing = false
                     RuneKit.rebuildMain()
+                }
+            }
+
+            button(icon("/title-bar/discord.png"), icon("/title-bar/discord-hover.png")) {
+                bounds = bounds.apply {
+                    x = frameDimensions.width - 145
+                    y = 6
+                }
+                addActionListener {
+                    openLink(discordLink)
                 }
             }
 

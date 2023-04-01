@@ -3,11 +3,13 @@ package com.runekit
 import org.jdesktop.swingx.JXButton
 import org.jdesktop.swingx.JXPanel
 import java.awt.Color
+import java.awt.Desktop
 import java.awt.Dimension
 import java.awt.Image
 import java.awt.geom.AffineTransform
 import java.awt.image.AffineTransformOp
 import java.awt.image.BufferedImage
+import java.net.URI
 import javax.swing.*
 
 
@@ -15,7 +17,8 @@ import javax.swing.*
  * @author Alycia <https://github.com/alycii>
  */
 
-const val appTitle: String = "2011Scape - Powered by RuneKit"
+const val appTitle: String = "2011Scape"
+const val discordLink: String = "https://discord.gg/jDbBAKjhxh"
 val borderColor: Color = Color.decode("#49422d")
 val backgroundColor: Color = Color.decode("#181818")
 var pluginView = true
@@ -95,4 +98,13 @@ fun createFlippedImage(image: Image): Image {
     tx.translate(-image.getWidth(null).toDouble(), 0.0)
     val op = AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR)
     return op.filter(bufferedImage, null)
+}
+
+fun openLink(url: String) {
+    if (Desktop.isDesktopSupported()) {
+        val desktop = Desktop.getDesktop()
+        if (desktop.isSupported(Desktop.Action.BROWSE)) {
+            desktop.browse(URI(url))
+        }
+    }
 }
