@@ -1,11 +1,7 @@
 package com.runekit
 
-import com.runekit.panels.Applet
-import com.runekit.panels.Information
-import com.runekit.panels.Navigation
-import com.runekit.panels.Title
+import com.runekit.panels.*
 import org.ngrinder.recorder.ui.component.ComponentResizer
-import java.awt.CardLayout
 import java.awt.Color
 import java.awt.Dimension
 import java.awt.Insets
@@ -26,7 +22,7 @@ import javax.swing.JPanel
  * This frame contains the main panels that make up the application.
  * It is responsible for handling resize events, rebuilding the UI when the frame size changes.
  */
-class RuneKit : JFrame() {
+object RuneKit : JFrame() {
 
     // List of main panels
     private val framePanels = mutableListOf<JPanel>()
@@ -35,7 +31,7 @@ class RuneKit : JFrame() {
     private val applet = Applet()
 
     // Main content panel for the frame
-    private val content = JPanel(CardLayout()).apply {
+    private var content = JPanel().apply {
         background = backgroundColor
         border = BorderFactory.createLineBorder(Color.decode("#49422d"))
         layout = null
@@ -49,18 +45,24 @@ class RuneKit : JFrame() {
 
         // Set the content pane for the frame
         contentPane = content
-        rebuildPanels()
 
         // Add the game applet
         content.add(applet)
 
         // Set the frame defaults
-        title = "2011Scape - Powered by RuneKit"
+        title = appTitle
         isUndecorated = true
         size = frameDimensions
-        minimumSize = frameDimensions
+        minimumSize = minimumSize.apply {
+            width = 780
+            height = 540
+        }
         setLocationRelativeTo(null)
         isVisible = true
+
+
+        // Rebuild the main frame
+        rebuildMain()
 
         // Set up the component resizer for the frame
         ComponentResizer().run {
@@ -68,24 +70,37 @@ class RuneKit : JFrame() {
             registerComponent(this@RuneKit)
         }
 
-        // Add a component listener for resize events
         addComponentListener(object : ComponentAdapter() {
             override fun componentResized(e: ComponentEvent?) {
-                rebuildMain()
-                applet.refresh()
+               if(manuallyResizing) {
+                    rebuildMain()
+               } else {
+                   manuallyResizing = true
+               }
             }
         })
-
     }
 
     /**
      * Rebuilds the main frame when the frame size changes.
      */
-    private fun rebuildMain() {
-        frameDimensions = Dimension(width, height)
+    fun rebuildMain() {
+        frameDimensions = when {
+            !pluginView && !manuallyResizing -> Dimension(width - 270, height)
+            pluginView && !manuallyResizing -> Dimension(width + 274, height)
+            else -> Dimension(width, height)
+        }
+        bounds = bounds.apply {
+            width = frameDimensions.width
+            height = frameDimensions.height
+        }
         content.components.filter { it != applet }.forEach(content::remove)
         rebuildPanels()
+        applet.refresh()
+        repaint()
+        revalidate()
     }
+
 
     /**
      * Rebuilds the list of frame panels and updates the content pane of the frame.
@@ -93,9 +108,11 @@ class RuneKit : JFrame() {
      */
     private fun rebuildPanels() {
         framePanels.clear()
-        framePanels.add(Title())
-        framePanels.add(Navigation())
-        framePanels.add(Information())
+        framePanels.add(Title.build())
+        if(pluginView) {
+            framePanels.add(Plugins())
+            framePanels.add(Information())
+        }
         framePanels.forEach(content::add)
     }
 

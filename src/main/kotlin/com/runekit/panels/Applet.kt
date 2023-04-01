@@ -4,6 +4,7 @@ import com.jagex.RS2Applet
 import com.runekit.backgroundColor
 import com.runekit.borderColor
 import com.runekit.frameDimensions
+import com.runekit.pluginView
 import java.awt.BorderLayout
 import java.awt.Dimension
 import javax.swing.BorderFactory
@@ -22,7 +23,7 @@ class Applet : JPanel() {
 
     companion object {
         /** The original size of the applet. */
-        val originalSize = Dimension(765, 503)
+        val originalSize = Dimension(774, 506)
 
         /** The y offset based on the navigation bar height. */
         const val NAV_OFFSET_Y = 32
@@ -51,7 +52,7 @@ class Applet : JPanel() {
      * panel.
      */
     init {
-        setBounds(X_OFFSET, NAV_OFFSET_Y, frameDimensions.width - 278, frameDimensions.height - FRAME_OFFSET_Y)
+        setBounds(X_OFFSET, NAV_OFFSET_Y, frameDimensions.width - if(pluginView) 278 else 6, frameDimensions.height - FRAME_OFFSET_Y)
         background = backgroundColor
         border = BorderFactory.createLineBorder(borderColor)
         layout = BorderLayout()
@@ -64,11 +65,13 @@ class Applet : JPanel() {
      * applet.
      */
     fun refresh() {
-        val newWidth = frameDimensions.width - 278
+        val newWidth = frameDimensions.width - if(pluginView) 278 else 6
         val newHeight = frameDimensions.height - FRAME_OFFSET_Y
         border = null
         setBounds(X_OFFSET, NAV_OFFSET_Y, newWidth, newHeight)
-        border = BorderFactory.createLineBorder(borderColor)
+        if(pluginView) {
+            border = BorderFactory.createLineBorder(borderColor)
+        }
         applet.size = Dimension(newWidth, newHeight)
         applet.repaint()
         applet.revalidate()

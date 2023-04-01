@@ -14,6 +14,7 @@ dependencies {
     testImplementation(kotlin("test"))
     implementation(files("lib/ComponentResizer.jar"))
     implementation(files("lib/rs2-client-graphics.jar"))
+    implementation("org.swinglabs.swingx:swingx-all:1.6.5-1")
 }
 
 tasks.test {

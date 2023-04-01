@@ -10,7 +10,7 @@ import javax.swing.JPanel
 /**
  * @author Alycia <https://github.com/alycii>
  */
-class Navigation : JPanel() {
+class Plugins : JPanel() {
 
 
     companion object {

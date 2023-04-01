@@ -1,39 +1,77 @@
 package com.runekit.panels
 
-import com.runekit.backgroundColor
-import com.runekit.borderColor
-import com.runekit.frameDimensions
-import javax.swing.BorderFactory
-import javax.swing.JPanel
+import com.runekit.*
+import org.jdesktop.swingx.JXPanel
+import java.awt.Color
+import java.awt.Point
+import java.awt.event.MouseAdapter
+import java.awt.event.MouseEvent
+import java.awt.event.MouseMotionAdapter
+import javax.swing.SwingUtilities
 
 
 /**
  * @author Alycia <https://github.com/alycii>
  */
-class Title : JPanel() {
+object Title {
 
-    companion object {
+    private const val panelHeight: Int = 30
 
-        /** The height of the title bar. */
-        const val HEIGHT = 30
-    }
+    private var dragOffset: Point? = null
 
-    init {
-        val width = frameDimensions.width
+    fun build(): JXPanel {
+        return panel {
+            bounds = bounds.apply {
+                width = frameDimensions.width
+                height = panelHeight
+            }
 
+            label {
+                text = appTitle
+                bounds = bounds.apply {
+                    x = 15
+                    width = frameDimensions.width
+                    height = panelHeight
+                }
+                foreground = Color.decode("#c8bd9e")
+            }
 
-        // Set the bounds of the panel based on the screen dimensions and original size
-        setBounds(
-            0, 0, width, HEIGHT
-        )
+            button(icon("/close.png"), icon("/close-hover.png")) {
+                bounds = bounds.apply {
+                    x = frameDimensions.width - 30
+                    y = 6
+                }
+                addActionListener {
+                    pluginView = !pluginView
+                    manuallyResizing = false
+                    RuneKit.rebuildMain()
+                }
+            }
 
-        // Set the background color of the panel
-        background = backgroundColor
+            addMouseListener(object : MouseAdapter() {
+                override fun mousePressed(e: MouseEvent) {
+                    // Store the offset between the mouse position and the top-left corner of the panel
+                    dragOffset = e.point
+                }
 
-        // Set the border of the panel
-        border = BorderFactory.createLineBorder(borderColor)
+                override fun mouseReleased(e: MouseEvent) {
+                    // Reset the drag offset
+                    dragOffset = null
+                }
+            })
 
-        // Set the visibility of the panel
-        isVisible = true
+            addMouseMotionListener(object : MouseMotionAdapter() {
+                override fun mouseDragged(e: MouseEvent) {
+                    dragOffset?.let {
+                        // Calculate the new position of the JFrame based on the current mouse position and the drag offset
+                        val newX = e.xOnScreen - it.x
+                        val newY = e.yOnScreen - it.y
+                        SwingUtilities.getWindowAncestor(this@panel)?.let { window ->
+                            window.location = Point(newX, newY)
+                        }
+                    }
+                }
+            })
+        }
     }
 }
