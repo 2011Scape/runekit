@@ -37,7 +37,13 @@ class Applet : JPanel() {
          * The x offset
          */
         const val X_OFFSET = 3
+
     }
+
+    /**
+     * The offset for if plugins are being viewed
+     */
+    private var pluginOffset = if (pluginView) 278 else 6
 
     /** The Java applet to display on the panel. */
     private val applet = RS2Applet().apply {
@@ -52,11 +58,26 @@ class Applet : JPanel() {
      * panel.
      */
     init {
-        setBounds(X_OFFSET, NAV_OFFSET_Y, frameDimensions.width - if(pluginView) 278 else 6, frameDimensions.height - FRAME_OFFSET_Y)
+
+        // Set the panels bounds
+        bounds = bounds.apply {
+            x = X_OFFSET
+            y = NAV_OFFSET_Y
+            width = frameDimensions.width - pluginOffset
+            height = frameDimensions.height - FRAME_OFFSET_Y
+        }
+
+        // Set the background color
         background = backgroundColor
+
+        // Set the border
         border = BorderFactory.createLineBorder(borderColor)
+
+        // Add the layout and applet
         layout = BorderLayout()
         add(applet, BorderLayout.CENTER)
+
+        // Display
         isVisible = true
     }
 
@@ -65,14 +86,29 @@ class Applet : JPanel() {
      * applet.
      */
     fun refresh() {
-        val newWidth = frameDimensions.width - if(pluginView) 278 else 6
-        val newHeight = frameDimensions.height - FRAME_OFFSET_Y
+
+        // Reset the plugin offset
+        pluginOffset = if (pluginView) 278 else 6
+
+
+        // Reset the border
         border = null
-        setBounds(X_OFFSET, NAV_OFFSET_Y, newWidth, newHeight)
-        if(pluginView) {
+
+        // Set the panels bounds
+        bounds = bounds.apply {
+            x = X_OFFSET
+            y = NAV_OFFSET_Y
+            width = frameDimensions.width - pluginOffset
+            height = frameDimensions.height - FRAME_OFFSET_Y
+        }
+
+        // Only show the border if the plugins are in view
+        if (pluginView) {
             border = BorderFactory.createLineBorder(borderColor)
         }
-        applet.size = Dimension(newWidth, newHeight)
+
+        // Finally, resize the applet
+        applet.size = size
         applet.repaint()
         applet.revalidate()
     }

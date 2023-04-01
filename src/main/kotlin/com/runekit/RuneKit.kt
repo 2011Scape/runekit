@@ -67,6 +67,7 @@ object RuneKit : JFrame() {
             registerComponent(this@RuneKit)
         }
 
+        // Add a component listener for resizing the window
         addComponentListener(object : ComponentAdapter() {
             override fun componentResized(e: ComponentEvent?) {
                if(manuallyResizing) {
