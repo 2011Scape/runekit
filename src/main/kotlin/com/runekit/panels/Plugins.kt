@@ -1,13 +1,9 @@
 package com.runekit.panels
 
-import com.runekit.backgroundColor
-import com.runekit.borderColor
 import com.runekit.frameDimensions
 import com.runekit.panel
 import org.jdesktop.swingx.JXPanel
 import java.awt.Dimension
-import javax.swing.BorderFactory
-import javax.swing.JPanel
 
 /**
  * @author Alycia <https://github.com/alycii>

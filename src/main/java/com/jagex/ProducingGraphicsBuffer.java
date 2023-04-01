@@ -1,7 +1,6 @@
 package com.jagex;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Shape;
+
+import java.awt.*;
 import java.awt.image.ColorModel;
 import java.awt.image.DirectColorModel;
 import java.awt.image.ImageConsumer;

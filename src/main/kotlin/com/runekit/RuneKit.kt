@@ -1,13 +1,14 @@
 package com.runekit
 
-import com.runekit.panels.*
+import com.runekit.panels.Applet
+import com.runekit.panels.Information
+import com.runekit.panels.Plugins
+import com.runekit.panels.Title
 import org.ngrinder.recorder.ui.component.ComponentResizer
-import java.awt.Color
 import java.awt.Dimension
 import java.awt.Insets
 import java.awt.event.ComponentAdapter
 import java.awt.event.ComponentEvent
-import javax.swing.BorderFactory
 import javax.swing.JFrame
 import javax.swing.JPanel
 

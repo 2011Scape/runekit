@@ -1,13 +1,7 @@
 package com.jagex;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Rectangle;
-import java.awt.Shape;
-import java.awt.image.BufferedImage;
-import java.awt.image.DataBufferInt;
-import java.awt.image.DirectColorModel;
-import java.awt.image.Raster;
-import java.awt.image.WritableRaster;
+
+import java.awt.*;
+import java.awt.image.*;
 import java.util.Hashtable;
 
 public class GraphicsBuffer_Sub1 extends GraphicsBuffer

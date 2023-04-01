@@ -2,7 +2,9 @@ package com.runekit
 
 import org.jdesktop.swingx.JXButton
 import org.jdesktop.swingx.JXPanel
-import java.awt.*
+import java.awt.Color
+import java.awt.Dimension
+import java.awt.Image
 import javax.swing.BorderFactory
 import javax.swing.ImageIcon
 import javax.swing.JButton
