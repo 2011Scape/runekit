@@ -3,6 +3,8 @@ package com.runekit.panels
 import com.runekit.backgroundColor
 import com.runekit.borderColor
 import com.runekit.frameDimensions
+import com.runekit.panel
+import org.jdesktop.swingx.JXPanel
 import java.awt.Dimension
 import javax.swing.BorderFactory
 import javax.swing.JPanel
@@ -15,45 +17,29 @@ import javax.swing.JPanel
 /**
  * A custom JPanel that displays information.
  */
-class Information : JPanel() {
+object Information {
 
 
-    companion object {
+    /** The original size of the panel. */
+    val originalSize = Dimension(233, 510)
 
-        /** The original size of the panel. */
-        val originalSize = Dimension(233, 510)
-
-        /** The x offset based on the navigation bar width. */
-        const val NAV_OFFSET_X = 40
-
-        /**
-         * The y offset based on the frames height
-         */
-        const val FRAME_OFFSET_Y = 29
-
-    }
+    /** The x offset based on the navigation bar width. */
+    const val NAV_OFFSET_X = 40
 
     /**
-     * Constructs an Information panel instance with a fixed size and position on the screen.
+     * The y offset based on the frames height
      */
-    init {
+    const val FRAME_OFFSET_Y = 29
 
-        // Set the bounds of the panel based on the screen dimensions and original size
-        setBounds(
-            frameDimensions.width - originalSize.width - NAV_OFFSET_X,
-            FRAME_OFFSET_Y,
-            originalSize.width,
-            frameDimensions.height - FRAME_OFFSET_Y
-        )
-
-        // Set the background color of the panel
-        background = backgroundColor
-
-        // Set the border of the panel
-        border = BorderFactory.createLineBorder(borderColor)
-
-        // Set the visibility of the panel
-        isVisible = true
+    fun build(): JXPanel {
+        return panel {
+            bounds = bounds.apply {
+                x = frameDimensions.width - originalSize.width - NAV_OFFSET_X
+                y = FRAME_OFFSET_Y
+                width = originalSize.width
+                height = frameDimensions.height - FRAME_OFFSET_Y
+            }
+        }
     }
 
 }

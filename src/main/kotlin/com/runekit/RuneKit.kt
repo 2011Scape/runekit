@@ -25,17 +25,13 @@ import javax.swing.JPanel
 object RuneKit : JFrame() {
 
     // List of main panels
-    private val framePanels = mutableListOf<JPanel>()
+    private val panels = mutableListOf<JPanel>()
 
     // Applet panel
     private val applet = Applet()
 
     // Main content panel for the frame
-    private var content = JPanel().apply {
-        background = backgroundColor
-        border = BorderFactory.createLineBorder(Color.decode("#49422d"))
-        layout = null
-    }
+    private var content = panel {}
 
     /**
      * Constructs the main frame for the application.
@@ -107,13 +103,13 @@ object RuneKit : JFrame() {
      * Clears the current list of panels and adds new instances.
      */
     private fun rebuildPanels() {
-        framePanels.clear()
-        framePanels.add(Title.build())
+        panels.clear()
+        panels.add(Title.build())
         if(pluginView) {
-            framePanels.add(Plugins())
-            framePanels.add(Information())
+            panels.add(Plugins.build())
+            panels.add(Information.build())
         }
-        framePanels.forEach(content::add)
+        panels.forEach(content::add)
     }
 
 }
