@@ -2,14 +2,15 @@ package com.runekit
 
 import org.jdesktop.swingx.JXButton
 import org.jdesktop.swingx.JXPanel
-import java.awt.Color
-import java.awt.Desktop
-import java.awt.Dimension
-import java.awt.Image
+import java.awt.*
 import java.awt.geom.AffineTransform
 import java.awt.image.AffineTransformOp
 import java.awt.image.BufferedImage
+import java.io.File
 import java.net.URI
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import javax.imageio.ImageIO
 import javax.swing.*
 
 
@@ -106,5 +107,33 @@ fun openLink(url: String) {
         if (desktop.isSupported(Desktop.Action.BROWSE)) {
             desktop.browse(URI(url))
         }
+    }
+}
+
+fun captureScreenshot() {
+    try {
+        // Create a Robot instance to capture the screen
+        val robot = Robot()
+
+        // Get the size of the screen
+        val screenSize = RuneKit.bounds
+
+        // Create a rectangle to represent the entire screen
+        val screenRect = Rectangle(screenSize)
+
+        // Capture the screen image
+        val image = robot.createScreenCapture(screenRect)
+
+        // Format the date to include in the filename
+        val date = LocalDate.now().format(DateTimeFormatter.ofPattern("MM-dd-yyyy"))
+        val filename = "Screenshot-$date.png"
+
+        // Create a file to save the screenshot to
+        val file = File("./screenshots/$filename")
+
+        // Write the image to the file as a PNG
+        ImageIO.write(image, "png", file)
+    } catch (ex: Exception) {
+        ex.printStackTrace()
     }
 }

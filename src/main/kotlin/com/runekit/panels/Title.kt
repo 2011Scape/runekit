@@ -2,16 +2,17 @@ package com.runekit.panels
 
 import com.runekit.*
 import org.jdesktop.swingx.JXPanel
-import java.awt.Color
-import java.awt.Desktop
-import java.awt.Point
+import java.awt.*
 import java.awt.event.MouseAdapter
 import java.awt.event.MouseEvent
 import java.awt.event.MouseMotionAdapter
-import java.net.URI
+import java.io.File
+import java.io.IOException
+import javax.imageio.ImageIO
 import javax.swing.JFrame
 import javax.swing.SwingUtilities
 import kotlin.system.exitProcess
+
 
 /**
  * The title bar for the main application frame.
@@ -121,6 +122,18 @@ object Title {
                     openLink(discordLink)
                 }
             }
+
+            // Add the Screenshot button
+            button(icon("/title-bar/camera.png"), icon("/title-bar/camera-hover.png")) {
+                bounds = bounds.apply {
+                    x = frameDimensions.width - 170
+                    y = 6
+                }
+                addActionListener {
+                    captureScreenshot()
+                }
+            }
+
 
             addMouseListener(object : MouseAdapter() {
                 override fun mousePressed(e: MouseEvent) {
