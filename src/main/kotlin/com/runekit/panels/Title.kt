@@ -2,13 +2,11 @@ package com.runekit.panels
 
 import com.runekit.*
 import org.jdesktop.swingx.JXPanel
-import java.awt.*
+import java.awt.Color
+import java.awt.Point
 import java.awt.event.MouseAdapter
 import java.awt.event.MouseEvent
 import java.awt.event.MouseMotionAdapter
-import java.io.File
-import java.io.IOException
-import javax.imageio.ImageIO
 import javax.swing.JFrame
 import javax.swing.SwingUtilities
 import kotlin.system.exitProcess
