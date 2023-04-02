@@ -9,6 +9,7 @@ import java.awt.image.BufferedImage
 import java.io.File
 import java.net.URI
 import java.time.LocalDate
+import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import javax.imageio.ImageIO
 import javax.swing.*
@@ -22,7 +23,7 @@ const val appTitle: String = "2011Scape"
 const val discordLink: String = "https://discord.gg/jDbBAKjhxh"
 val borderColor: Color = Color.decode("#49422d")
 val backgroundColor: Color = Color.decode("#181818")
-var pluginView = true
+var pluginView = false
 var frameDimensions = Dimension(if(pluginView) 1050 else 780, 540)
 var manuallyResizing = true
 
@@ -110,6 +111,10 @@ fun openLink(url: String) {
     }
 }
 
+/**
+ * Captures a screenshot of the screen and saves it to a file.
+ * The filename includes the date and time of the capture.
+ */
 fun captureScreenshot() {
     try {
         // Create a Robot instance to capture the screen
@@ -124,9 +129,11 @@ fun captureScreenshot() {
         // Capture the screen image
         val image = robot.createScreenCapture(screenRect)
 
-        // Format the date to include in the filename
-        val date = LocalDate.now().format(DateTimeFormatter.ofPattern("MM-dd-yyyy"))
-        val filename = "Screenshot-$date.png"
+        // Get the current date and time
+        val timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss"))
+
+        // Create a filename that includes the current date and time
+        val filename = "Screenshot-$timestamp.png"
 
         // Create a file to save the screenshot to
         val file = File("./screenshots/$filename")
