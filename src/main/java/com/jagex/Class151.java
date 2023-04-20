@@ -10,7 +10,7 @@ public class Class151
 	protected int anInt1846;
 	protected int anInt1847;
 	
-	static final void method1671(int i, int i_0_, int i_1_, int i_2_, byte[][][] bs, int[] is, int[] is_3_, int[] is_4_, int[] is_5_, int[] is_6_, int i_7_, byte b, int i_8_, int i_9_, boolean bool, boolean bool_10_, int i_11_, int i_12_, boolean bool_13_) {
+	static final void method1671(int i, int i_0_, int i_1_, int i_2_, byte[][][] bs, int[] is, int[] is_3_, int[] is_4_, int[] is_5_, int[] is_6_, int i_7_, byte b, int i_8_, int i_9_, boolean highDetailLights, boolean bool_10_, int i_11_, int i_12_, boolean bool_13_) {
 		Mobile_Sub1.aBoolean10959 = true;
 		Class239.aBoolean2932 = CacheNode_Sub18.aGraphicsToolkit9607.e() > 0;
 		Class307.aBoolean3898 = bool_10_;
@@ -109,7 +109,7 @@ public class Class151
 		}
 		if (Class239.aBoolean2932) {
 			for (int i_28_ = 0; i_28_ < Class188_Sub1_Sub1.anInt9337; i_28_++)
-				Class143.aClass326Array1771[i_28_].method3816(bool, i, (byte) 114);
+				Class143.aClass326Array1771[i_28_].method3816(highDetailLights, i, (byte) 114);
 		}
 		if (Class188_Sub2.aBoolean6868) {
 			Class20_Sub1.anIntArray5510 = CacheNode_Sub18.aGraphicsToolkit9607.Y();

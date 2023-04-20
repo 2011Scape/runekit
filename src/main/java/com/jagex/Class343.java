@@ -1,5 +1,7 @@
 package com.jagex;
 
+import java.util.*;
+
 public class Class343
 {
 	protected Class119 aClass119_4238;
@@ -17,11 +19,11 @@ public class Class343
 	protected float aFloat4250;
 	protected float aFloat4251 = 1.0F;
 	static int anInt4252;
-	protected int anInt4253;
+	protected int lightColor;
 	protected float aFloat4254;
 	static short[] aShortArray4255;
 	protected float aFloat4256;
-	protected int anInt4257;
+	protected int fogColor;
 	protected int anInt4258;
 	static int anInt4259;
 	
@@ -70,7 +72,8 @@ public class Class343
 		if (i != 24176) {
 			method3964(null, -46);
 		}
-		if ((Class213.aNode_Sub27_2512.aClass320_Sub24_7317.method3773(false) ^ 0xffffffff) != -2 || Class229.aGraphicsToolkit2732.e() <= 0) {
+		boolean highDetailLights = (Class213.aNode_Sub27_2512.aClass320_Sub24_7317.highDetailLighting(false) ^ 0xffffffff) == -2;
+		if ((Class213.aNode_Sub27_2512.aClass320_Sub24_7317.highDetailLighting(false) ^ 0xffffffff) != -2 || Class229.aGraphicsToolkit2732.e() <= 0) {
 			if ((0x1 & i_6_ ^ 0xffffffff) != -1) {
 				buffer.method2186(102);
 			}
@@ -86,12 +89,12 @@ public class Class343
 			aFloat4250 = 1.2F;
 			aFloat4254 = 1.1523438F;
 			aFloat4256 = 0.69921875F;
-			anInt4253 = Class42.anInt649;
+			lightColor = Class42.anInt649;
 		} else {
 			if ((i_6_ & 0x1) == 0) {
-				anInt4253 = Class42.anInt649;
+				lightColor = Class42.anInt649;
 			} else {
-				anInt4253 = buffer.method2186(i + -24070);
+				lightColor = buffer.method2186(i + -24070);
 			}
 			if ((0x2 & i_6_ ^ 0xffffffff) == -1) {
 				aFloat4254 = 1.1523438F;
@@ -119,9 +122,9 @@ public class Class343
 			anInt4247 = -60;
 		}
 		if ((0x20 & i_6_ ^ 0xffffffff) != -1) {
-			anInt4257 = buffer.method2186(98);
+			fogColor = buffer.method2186(98);
 		} else {
-			anInt4257 = Class320_Sub26.anInt8456;
+			fogColor = Class320_Sub26.fogColor;
 		}
 		if ((i_6_ & 0x40 ^ 0xffffffff) != -1) {
 			anInt4258 = buffer.method2219(-130546744);
@@ -139,6 +142,25 @@ public class Class343
 		} else {
 			aClass270_4240 = GraphicsToolkit.aClass270_1548;
 		}
+
+		// TODO: Plugin support
+		Set<Integer> disabledColors = Collections.unmodifiableSet(new HashSet<>(Arrays.asList(13611671, 8029029)));
+		if (highDetailLights) {
+			if (disabledColors.contains(lightColor)) {
+				aFloat4250 = 1.2F;
+				aFloat4254 = 1.1523438F;
+				aFloat4256 = 0.69921875F;
+				lightColor = 16777215;
+				fogColor = 13156520;
+				anInt4249 = -50;
+				anInt4248 = -50;
+				anInt4247 = -60;
+				anInt4258 = 0;
+				aClass270_4240 = GraphicsToolkit.aClass270_1548;
+			}
+		}
+
+
 	}
 	
 	static final boolean method3967(int i, int i_13_, int i_14_) {
@@ -155,7 +177,7 @@ public class Class343
 	final boolean method3968(byte b, Class343 class343_15_) {
 		anInt4246++;
 		int i = 39 / ((b - -4) / 42);
-		if (anInt4253 != class343_15_.anInt4253 || class343_15_.aFloat4254 != aFloat4254 || aFloat4256 != class343_15_.aFloat4256 || aFloat4250 != class343_15_.aFloat4250 || class343_15_.aFloat4239 != aFloat4239 || aFloat4244 != class343_15_.aFloat4244 || aFloat4251 != class343_15_.aFloat4251 || (anInt4257 ^ 0xffffffff) != (class343_15_.anInt4257 ^ 0xffffffff) || (class343_15_.anInt4258 ^ 0xffffffff) != (anInt4258 ^ 0xffffffff) || class343_15_.aClass270_4240 != aClass270_4240 || class343_15_.aClass119_4238 != aClass119_4238) {
+		if (lightColor != class343_15_.lightColor || class343_15_.aFloat4254 != aFloat4254 || aFloat4256 != class343_15_.aFloat4256 || aFloat4250 != class343_15_.aFloat4250 || class343_15_.aFloat4239 != aFloat4239 || aFloat4244 != class343_15_.aFloat4244 || aFloat4251 != class343_15_.aFloat4251 || (fogColor ^ 0xffffffff) != (class343_15_.fogColor ^ 0xffffffff) || (class343_15_.anInt4258 ^ 0xffffffff) != (anInt4258 ^ 0xffffffff) || class343_15_.aClass270_4240 != aClass270_4240 || class343_15_.aClass119_4238 != aClass119_4238) {
 			return false;
 		}
 		return true;
@@ -168,11 +190,11 @@ public class Class343
 		anInt4249 = -50;
 		aFloat4250 = 1.2F;
 		aClass119_4238 = Class263.aClass119_3340;
-		anInt4253 = Class42.anInt649;
+		lightColor = Class42.anInt649;
 		aFloat4256 = 0.69921875F;
 		aFloat4254 = 1.1523438F;
 		anInt4248 = -50;
-		anInt4257 = Class320_Sub26.anInt8456;
+		fogColor = Class320_Sub26.fogColor;
 		anInt4258 = 0;
 	}
 	

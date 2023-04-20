@@ -2485,7 +2485,7 @@ public class client extends GameStub
 				string += "2)" + CacheNode_Sub20_Sub1.anInt11089 + "," + (Class295.aPlayer3692.anIntArray10910[0] + Node_Sub53.anInt7668) + "," + (Class320_Sub4.anInt8243 + Class295.aPlayer3692.anIntArray10908[0]) + "|";
 			}
 			string += "3)" + Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791(false) + "|4)" + Class213.aNode_Sub27_2512.aClass320_Sub13_7284.method3734(false) + "|5)" + Class188_Sub2_Sub1.method1908(3) + "|6)" + Class360.anInt4480 + "," + Class205.anInt5115 + "|";
-			string += "7)" + Class213.aNode_Sub27_2512.aClass320_Sub24_7317.method3773(false) + "|";
+			string += "7)" + Class213.aNode_Sub27_2512.aClass320_Sub24_7317.highDetailLighting(false) + "|";
 			string += "8)" + Class213.aNode_Sub27_2512.aClass320_Sub12_7282.method3730(false) + "|";
 			string += "9)" + Class213.aNode_Sub27_2512.aClass320_Sub26_7269.method3779(false) + "|";
 			string += "10)" + Class213.aNode_Sub27_2512.aClass320_Sub30_7275.method3796(false) + "|";

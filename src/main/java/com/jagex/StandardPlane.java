@@ -3,7 +3,7 @@ import jaclib.memory.Stream;
 
 public class StandardPlane extends Plane
 {
-	static int[] anIntArray7980;
+	static int[] mapscapes;
 	protected int anInt7981;
 	private int anInt7982;
 	static int anInt7983;
@@ -790,7 +790,7 @@ public class StandardPlane extends Plane
 		if (b != 66) {
 			method3274((byte) 51);
 		}
-		anIntArray7980 = null;
+		mapscapes = null;
 	}
 	
 	private final void method3275(int i, int i_191_, r_Sub1 var_r_Sub1, int i_192_) {

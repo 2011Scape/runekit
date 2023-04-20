@@ -102,6 +102,9 @@ public class Class290_Sub3 extends Class290
 			OpenGL.glUniform1iARB(OpenGL.glGetUniformLocationARB(l, "normalSampler"), 0);
 			OpenGL.glUniform1iARB(OpenGL.glGetUniformLocationARB(l, "envMapSampler"), 1);
 			OpenGL.glUniform3fARB(OpenGL.glGetUniformLocationARB(l, "sunDir"), -anAbstractToolkit3654.aFloatArray6292[0], -anAbstractToolkit3654.aFloatArray6292[1], -anAbstractToolkit3654.aFloatArray6292[2]);
+			System.out.println("sun color 1 -> " + anAbstractToolkit3654.aFloat6323);
+			System.out.println("sun color 2 -> " + anAbstractToolkit3654.aFloat6293);
+			System.out.println("sun color 3 -> " + anAbstractToolkit3654.aFloat6365);
 			OpenGL.glUniform4fARB(OpenGL.glGetUniformLocationARB(l, "sunColour"), anAbstractToolkit3654.aFloat6323, anAbstractToolkit3654.aFloat6293, anAbstractToolkit3654.aFloat6365, 1.0F);
 			OpenGL.glUniform1fARB(OpenGL.glGetUniformLocationARB(l, "sunExponent"), Math.abs(anAbstractToolkit3654.aFloatArray6292[1]) * 928.0F + 96.0F);
 			aBoolean8086 = true;

@@ -427,11 +427,11 @@ public class Node_Sub38_Sub20 extends Node_Sub38
 				Class15.anIntArrayArray224[i_51_][i_52_] = packet.method2186(-83);
 		}
 		Class194.aByteArrayArray2373 = null;
-		Class188_Sub1_Sub1.aByteArrayArray9334 = new byte[i_50_][];
+		Class188_Sub1_Sub1.mapsArray = new byte[i_50_][];
 		FileOnDisk.aByteArrayArray1331 = new byte[i_50_][];
 		Class144.anIntArray1789 = new int[i_50_];
 		Class320_Sub6.aByteArrayArray8263 = new byte[i_50_][];
-		StandardPlane.anIntArray7980 = new int[i_50_];
+		StandardPlane.mapscapes = new int[i_50_];
 		Class42.anIntArray645 = new int[i_50_];
 		ProducingGraphicsBuffer.anIntArray9895 = new int[i_50_];
 		Class204.anIntArray2460 = null;
@@ -444,7 +444,7 @@ public class Node_Sub38_Sub20 extends Node_Sub38
 		for (int i_53_ = (-(Node_Sub54.anInt7675 >> 4) + i_48_) / 8; ((Node_Sub54.anInt7675 >> 4) + i_48_) / 8 >= i_53_; i_53_++) {
 			for (int i_54_ = (-(Class377_Sub1.anInt8774 >> 4) + i_49_) / 8; (i_54_ ^ 0xffffffff) >= ((i_49_ + (Class377_Sub1.anInt8774 >> 4)) / 8 ^ 0xffffffff); i_54_++) {
 				Class262_Sub1.anIntArray7704[i_50_] = (i_53_ << 8) - -i_54_;
-				StandardPlane.anIntArray7980[i_50_] = Animable_Sub1_Sub1.aClass302_10618.method3519("m" + i_53_ + "_" + i_54_, (byte) 33);
+				StandardPlane.mapscapes[i_50_] = Animable_Sub1_Sub1.aClass302_10618.method3519("m" + i_53_ + "_" + i_54_, (byte) 33);
 				Class144.anIntArray1789[i_50_] = Animable_Sub1_Sub1.aClass302_10618.method3519("l" + i_53_ + "_" + i_54_, (byte) 19);
 				Class42.anIntArray645[i_50_] = Animable_Sub1_Sub1.aClass302_10618.method3519("um" + i_53_ + "_" + i_54_, (byte) 87);
 				ProducingGraphicsBuffer.anIntArray9895[i_50_] = Animable_Sub1_Sub1.aClass302_10618.method3519("ul" + i_53_ + "_" + i_54_, (byte) 109);

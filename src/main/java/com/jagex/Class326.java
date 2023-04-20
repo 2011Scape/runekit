@@ -34,13 +34,13 @@ public class Class326
 		}
 	}
 	
-	final void method3816(boolean bool, int i, byte b) {
+	final void method3816(boolean highDetailLights, int i, byte b) {
 		anInt4095++;
 		int i_0_ = -46 / ((61 - b) / 47);
 		int i_1_;
 	while_242_:
 		do {
-			if (!bool) {
+			if (!highDetailLights) {
 				int i_2_ = 0x7ff & i * anInt4104 / 50 + anInt4094;
 				int i_3_ = anInt4107;
 			while_241_:

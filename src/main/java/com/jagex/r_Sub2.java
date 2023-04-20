@@ -447,10 +447,10 @@ public class r_Sub2 extends r
 		anInt11066++;
 		Node_Sub29_Sub2.anInt10015 = 0;
 		boolean bool = true;
-		for (int i_26_ = 0; (Class188_Sub1_Sub1.aByteArrayArray9334.length ^ 0xffffffff) < (i_26_ ^ 0xffffffff); i_26_++) {
-			if (StandardPlane.anIntArray7980[i_26_] != -1 && Class188_Sub1_Sub1.aByteArrayArray9334[i_26_] == null) {
-				Class188_Sub1_Sub1.aByteArrayArray9334[i_26_] = Animable_Sub1_Sub1.aClass302_10618.method3524(false, 0, StandardPlane.anIntArray7980[i_26_]);
-				if (Class188_Sub1_Sub1.aByteArrayArray9334[i_26_] == null) {
+		for (int i_26_ = 0; (Class188_Sub1_Sub1.mapsArray.length ^ 0xffffffff) < (i_26_ ^ 0xffffffff); i_26_++) {
+			if (StandardPlane.mapscapes[i_26_] != -1 && Class188_Sub1_Sub1.mapsArray[i_26_] == null) {
+				Class188_Sub1_Sub1.mapsArray[i_26_] = Animable_Sub1_Sub1.aClass302_10618.method3524(false, 0, StandardPlane.mapscapes[i_26_]);
+				if (Class188_Sub1_Sub1.mapsArray[i_26_] == null) {
 					Node_Sub29_Sub2.anInt10015++;
 					bool = false;
 				}
@@ -501,7 +501,7 @@ public class r_Sub2 extends r
 		} else {
 			bool = true;
 			Node_Sub2.anInt6937 = 0;
-			for (int i_27_ = 0; (Class188_Sub1_Sub1.aByteArrayArray9334.length ^ 0xffffffff) < (i_27_ ^ 0xffffffff); i_27_++) {
+			for (int i_27_ = 0; (Class188_Sub1_Sub1.mapsArray.length ^ 0xffffffff) < (i_27_ ^ 0xffffffff); i_27_++) {
 				byte[] bs = FileOnDisk.aByteArrayArray1331[i_27_];
 				if (bs != null) {
 					int i_28_ = (Class262_Sub1.anIntArray7704[i_27_] >> 8) * 64 - Node_Sub53.anInt7668;
@@ -535,7 +535,7 @@ public class r_Sub2 extends r
 				Class30.method343(-126);
 				boolean bool_33_ = false;
 				if (Class93.aGraphicsToolkit1241.z() && Class213.aNode_Sub27_2512.aClass320_Sub26_7269.method3779(false) == 2) {
-					for (int i_34_ = 0; (Class188_Sub1_Sub1.aByteArrayArray9334.length ^ 0xffffffff) < (i_34_ ^ 0xffffffff); i_34_++) {
+					for (int i_34_ = 0; (Class188_Sub1_Sub1.mapsArray.length ^ 0xffffffff) < (i_34_ ^ 0xffffffff); i_34_++) {
 						if (Class320_Sub18.aByteArrayArray8378[i_34_] != null || Class320_Sub6.aByteArrayArray8263[i_34_] != null) {
 							bool_33_ = true;
 							break;
@@ -571,15 +571,15 @@ public class r_Sub2 extends r
 				Class237.anInt2906 = Class213.aNode_Sub27_2512.aClass320_Sub12_7282.method3730(false);
 				Class339_Sub6.aBoolean8715 = Class201.anInt2446 >= 96;
 				Class34.aBoolean532 = Class213.aNode_Sub27_2512.aClass320_Sub26_7269.method3779(false) == 2;
-				Class163.aBoolean2015 = Class213.aNode_Sub27_2512.aClass320_Sub24_7317.method3773(false) == 1;
+				Class163.aBoolean2015 = Class213.aNode_Sub27_2512.aClass320_Sub24_7317.highDetailLighting(false) == 1;
 				Class256.anInt3237 = (Class213.aNode_Sub27_2512.aClass320_Sub19_7301.method3751(false) ^ 0xffffffff) == -2 ? -1 : Class94.anInt1249;
 				Class382.aBoolean5254 = Class213.aNode_Sub27_2512.aClass320_Sub23_7290.method3770(false) == 1;
 				Class169_Sub2_Sub1.aBoolean10563 = Class213.aNode_Sub27_2512.aClass320_Sub30_7275.method3796(false) == 1;
 				Node_Sub38_Sub1.aClass277_Sub1_10084 = new Class277_Sub1(4, Node_Sub54.anInt7675, Class377_Sub1.anInt8774, false);
 				if (Class61.anInt898 == 0) {
-					Actor.method863(Class188_Sub1_Sub1.aByteArrayArray9334, (byte) -74, Node_Sub38_Sub1.aClass277_Sub1_10084);
+					Actor.method863(Class188_Sub1_Sub1.mapsArray, (byte) -74, Node_Sub38_Sub1.aClass277_Sub1_10084);
 				} else {
-					Class368.method4078(Class188_Sub1_Sub1.aByteArrayArray9334, (byte) -119, Node_Sub38_Sub1.aClass277_Sub1_10084);
+					Class368.method4078(Class188_Sub1_Sub1.mapsArray, (byte) -119, Node_Sub38_Sub1.aClass277_Sub1_10084);
 				}
 				Class290_Sub2.method3426(Node_Sub54.anInt7675 >> 4, (byte) 119, Class377_Sub1.anInt8774 >> 4);
 				Class89.method1022(false);

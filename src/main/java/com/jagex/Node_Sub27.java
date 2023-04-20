@@ -320,7 +320,7 @@ public class Node_Sub27 extends Node
 		buffer.method2226(aClass320_Sub23_7290.method3770(false), false);
 		buffer.method2226(aClass320_Sub6_7267.method3701(false), false);
 		buffer.method2226(aClass320_Sub27_7266.method3783(false), false);
-		buffer.method2226(aClass320_Sub24_7317.method3773(false), false);
+		buffer.method2226(aClass320_Sub24_7317.highDetailLighting(false), false);
 		buffer.method2226(aClass320_Sub12_7282.method3730(false), false);
 		buffer.method2226(aClass320_Sub3_7298.method3691(false), false);
 		buffer.method2226(aClass320_Sub28_7305.method3787(false), false);

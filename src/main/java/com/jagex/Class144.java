@@ -85,12 +85,12 @@ abstract class Class144
 		int i_21_ = Class169.anIntArrayArray4954.length;
 		anIntArray1789 = new int[i_21_];
 		Class262_Sub1.anIntArray7704 = new int[i_21_];
-		Class188_Sub1_Sub1.aByteArrayArray9334 = new byte[i_21_][];
+		Class188_Sub1_Sub1.mapsArray = new byte[i_21_][];
 		ProducingGraphicsBuffer.anIntArray9895 = new int[i_21_];
 		Class194.aByteArrayArray2373 = null;
 		FileOnDisk.aByteArrayArray1331 = new byte[i_21_][];
 		Class320_Sub6.aByteArrayArray8263 = new byte[i_21_][];
-		StandardPlane.anIntArray7980 = new int[i_21_];
+		StandardPlane.mapscapes = new int[i_21_];
 		Class42.anIntArray645 = new int[i_21_];
 		Class204.anIntArray2460 = null;
 		Class320_Sub18.aByteArrayArray8378 = new byte[i_21_][];
@@ -118,7 +118,7 @@ abstract class Class144
 						}
 					}
 					Class262_Sub1.anIntArray7704[i_21_] = i_28_;
-					StandardPlane.anIntArray7980[i_21_] = Animable_Sub1_Sub1.aClass302_10618.method3519("m" + i_26_ + "_" + i_27_, (byte) 119);
+					StandardPlane.mapscapes[i_21_] = Animable_Sub1_Sub1.aClass302_10618.method3519("m" + i_26_ + "_" + i_27_, (byte) 119);
 					anIntArray1789[i_21_] = Animable_Sub1_Sub1.aClass302_10618.method3519("l" + i_26_ + "_" + i_27_, (byte) 23);
 					Class42.anIntArray645[i_21_] = Animable_Sub1_Sub1.aClass302_10618.method3519("um" + i_26_ + "_" + i_27_, (byte) 120);
 					ProducingGraphicsBuffer.anIntArray9895[i_21_] = Animable_Sub1_Sub1.aClass302_10618.method3519("ul" + i_26_ + "_" + i_27_, (byte) 121);

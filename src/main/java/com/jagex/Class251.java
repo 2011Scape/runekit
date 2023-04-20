@@ -52,7 +52,7 @@ public class Class251
 		return 200;
 	}
 	
-	static final void method3099(byte b, int i, int i_0_, int i_1_, int i_2_, int[] is, int[] is_3_, int i_4_, int i_5_, int[] is_6_, boolean bool, boolean bool_7_, int i_8_, int[] is_9_, byte[][][] bs, int[] is_10_, int i_11_, int i_12_) {
+	static final void method3099(byte b, int i, int i_0_, int i_1_, int i_2_, int[] is, int[] is_3_, int i_4_, int i_5_, int[] is_6_, boolean highDetailLights, boolean bool_7_, int i_8_, int[] is_9_, byte[][][] bs, int[] is_10_, int i_11_, int i_12_) {
 		anInt3183++;
 		if (Class320_Sub20.anInt8397 != -1) {
 			int[] is_13_ = Class44.aGraphicsToolkit668.Y();
@@ -233,13 +233,13 @@ public class Class251
 						Class44.aGraphicsToolkit668.KA(0, i_51_, CacheNode_Sub15.anInt9589, i_51_ - -i_50_);
 						Class44.aGraphicsToolkit668.ya();
 						Class44.aGraphicsToolkit668.GA(Node_Sub43.anInt7539);
-						Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, i_11_, i_2_, bool, bool_7_, i_8_, 1, false);
+						Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, i_11_, i_2_, highDetailLights, bool_7_, i_8_, 1, false);
 					}
 					if (i_45_ > 0) {
 						Class44.aGraphicsToolkit668.KA(i_44_, i_48_, i_45_ + i_44_, i_49_ + i_48_);
 						Class44.aGraphicsToolkit668.ya();
 						Class44.aGraphicsToolkit668.GA(Node_Sub43.anInt7539);
-						Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, i_11_, i_2_, bool, bool_7_, i_8_, 1, false);
+						Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, i_11_, i_2_, highDetailLights, bool_7_, i_8_, 1, false);
 					}
 					Class44.aGraphicsToolkit668.la();
 					Node_Sub38_Sub7.method2805();
@@ -298,7 +298,7 @@ public class Class251
 				Class320_Sub10.aDouble8299 = 0.0;
 				Class7.aClass179_157.method1815((byte) 74);
 				Class320_Sub5.method3695(Class7.aClass179_157);
-				Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, i_11_, i_2_, bool, bool_7_, i_8_, 1, false);
+				Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, i_11_, i_2_, highDetailLights, bool_7_, i_8_, 1, false);
 				Node_Sub38_Sub7.method2805();
 				Class194_Sub1.aBoolean6892 = false;
 				if (Class320_Sub20.anInt8397 == 0) {
@@ -334,7 +334,7 @@ public class Class251
 				Class320_Sub10.anInt8303 = i_19_;
 				Class44.aGraphicsToolkit668.DA(Class118.anInt5404, Class320_Sub23.anInt8433, Class30.anInt491, Class320_Sub10.anInt8303);
 			}
-			Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, i_11_, i_2_, bool, bool_7_, i_8_, Class320_Sub20.anInt8397 != 2 ? 2 : 0, i_12_ == Class320_Sub20.anInt8397);
+			Class151.method1671(i_4_, i, i_1_, i_0_, bs, is_6_, is_9_, is, is_10_, is_3_, i_5_, b, i_11_, i_2_, highDetailLights, bool_7_, i_8_, Class320_Sub20.anInt8397 != 2 ? 2 : 0, i_12_ == Class320_Sub20.anInt8397);
 			Class44.aGraphicsToolkit668.la();
 			Class44.aGraphicsToolkit668.DA(i_14_, i_15_, i_16_, i_17_);
 		}
@@ -378,8 +378,8 @@ public class Class251
 		ProducingGraphicsBuffer.anIntArray9895 = new int[i_75_];
 		Class320_Sub18.aByteArrayArray8378 = new byte[i_75_][];
 		if (bool == false) {
-			StandardPlane.anIntArray7980 = new int[i_75_];
-			Class188_Sub1_Sub1.aByteArrayArray9334 = new byte[i_75_][];
+			StandardPlane.mapscapes = new int[i_75_];
+			Class188_Sub1_Sub1.mapsArray = new byte[i_75_][];
 			Class194.aByteArrayArray2373 = null;
 			Class42.anIntArray645 = new int[i_75_];
 			i_75_ = 0;
@@ -401,7 +401,7 @@ public class Class251
 								Class262_Sub1.anIntArray7704[i_75_] = i_84_;
 								int i_86_ = 0xff & i_84_ >> 8;
 								int i_87_ = i_84_ & 0xff;
-								StandardPlane.anIntArray7980[i_75_] = Animable_Sub1_Sub1.aClass302_10618.method3519("m" + i_86_ + "_" + i_87_, (byte) 102);
+								StandardPlane.mapscapes[i_75_] = Animable_Sub1_Sub1.aClass302_10618.method3519("m" + i_86_ + "_" + i_87_, (byte) 102);
 								Class144.anIntArray1789[i_75_] = Animable_Sub1_Sub1.aClass302_10618.method3519("l" + i_86_ + "_" + i_87_, (byte) 93);
 								Class42.anIntArray645[i_75_] = Animable_Sub1_Sub1.aClass302_10618.method3519("um" + i_86_ + "_" + i_87_, (byte) 82);
 								ProducingGraphicsBuffer.anIntArray9895[i_75_] = Animable_Sub1_Sub1.aClass302_10618.method3519("ul" + i_86_ + "_" + i_87_, (byte) 114);

@@ -8,7 +8,7 @@ public class Class320_Sub26 extends Class320
 	static int anInt8453;
 	static int anInt8454;
 	static int anInt8455;
-	static int anInt8456 = 13156520;
+	static int fogColor = 13156520;
 	static int anInt8457;
 	static int anInt8458;
 	static Class318 aClass318_8459;

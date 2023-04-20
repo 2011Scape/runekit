@@ -67,7 +67,7 @@ public class Class320_Sub12 extends Class320
 	static final void method3728(int i) {
 		anInt8317++;
 		int i_5_ = 0;
-		if (Class213.aNode_Sub27_2512.aClass320_Sub24_7317.method3773(false) == 1) {
+		if (Class213.aNode_Sub27_2512.aClass320_Sub24_7317.highDetailLighting(false) == 1) {
 			i_5_ |= 0x1;
 			i_5_ |= 0x10;
 			i_5_ |= 0x20;

@@ -5216,7 +5216,7 @@ public class Class305
 				return;
 			}
 			if (i == 6112) {
-				anIntArray3840[anInt3846++] = Class213.aNode_Sub27_2512.aClass320_Sub24_7317.method3773(false) == 1 ? 1 : 0;
+				anIntArray3840[anInt3846++] = Class213.aNode_Sub27_2512.aClass320_Sub24_7317.highDetailLighting(false) == 1 ? 1 : 0;
 				return;
 			}
 			if (i == 6114) {

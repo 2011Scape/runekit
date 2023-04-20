@@ -29,27 +29,27 @@ public class CacheNode_Sub3 extends CacheNode
 		Class15.anIntArrayArray224 = new int[i_2_][4];
 		Class194.aByteArrayArray2373 = new byte[i_2_][];
 		Class320_Sub6.aByteArrayArray8263 = new byte[i_2_][];
-		StandardPlane.anIntArray7980 = new int[i_2_];
+		StandardPlane.mapscapes = new int[i_2_];
 		Class42.anIntArray645 = new int[i_2_];
 		Class144.anIntArray1789 = new int[i_2_];
 		Class262_Sub1.anIntArray7704 = new int[i_2_];
 		Class320_Sub18.aByteArrayArray8378 = new byte[i_2_][];
 		ProducingGraphicsBuffer.anIntArray9895 = new int[i_2_];
 		Class204.anIntArray2460 = new int[i_2_];
-		Class188_Sub1_Sub1.aByteArrayArray9334 = new byte[i_2_][];
+		Class188_Sub1_Sub1.mapsArray = new byte[i_2_][];
 		FileOnDisk.aByteArrayArray1331 = new byte[i_2_][];
 		i_2_ = 0;
 		for (int i_3_ = (-(Node_Sub54.anInt7675 >> 4) + i_0_) / 8; ((i_0_ - -(Node_Sub54.anInt7675 >> 4)) / 8 ^ 0xffffffff) <= (i_3_ ^ 0xffffffff); i_3_++) {
 			for (int i_4_ = (-(Class377_Sub1.anInt8774 >> 4) + i_1_) / 8; i_4_ <= ((Class377_Sub1.anInt8774 >> 4) + i_1_) / 8; i_4_++) {
 				int i_5_ = i_4_ + (i_3_ << 8);
 				Class262_Sub1.anIntArray7704[i_2_] = i_5_;
-				StandardPlane.anIntArray7980[i_2_] = Animable_Sub1_Sub1.aClass302_10618.method3519("m" + i_3_ + "_" + i_4_, (byte) 97);
+				StandardPlane.mapscapes[i_2_] = Animable_Sub1_Sub1.aClass302_10618.method3519("m" + i_3_ + "_" + i_4_, (byte) 97);
 				Class144.anIntArray1789[i_2_] = Animable_Sub1_Sub1.aClass302_10618.method3519("l" + i_3_ + "_" + i_4_, (byte) 17);
 				Class204.anIntArray2460[i_2_] = Animable_Sub1_Sub1.aClass302_10618.method3519("n" + i_3_ + "_" + i_4_, (byte) 86);
 				Class42.anIntArray645[i_2_] = Animable_Sub1_Sub1.aClass302_10618.method3519("um" + i_3_ + "_" + i_4_, (byte) 122);
 				ProducingGraphicsBuffer.anIntArray9895[i_2_] = Animable_Sub1_Sub1.aClass302_10618.method3519("ul" + i_3_ + "_" + i_4_, (byte) 48);
 				if (Class204.anIntArray2460[i_2_] == -1) {
-					StandardPlane.anIntArray7980[i_2_] = -1;
+					StandardPlane.mapscapes[i_2_] = -1;
 					Class144.anIntArray1789[i_2_] = -1;
 					Class42.anIntArray645[i_2_] = -1;
 					ProducingGraphicsBuffer.anIntArray9895[i_2_] = -1;
@@ -59,7 +59,7 @@ public class CacheNode_Sub3 extends CacheNode
 		}
 		for (int i_6_ = i_2_; (Class204.anIntArray2460.length ^ 0xffffffff) < (i_6_ ^ 0xffffffff); i_6_++) {
 			Class204.anIntArray2460[i_6_] = -1;
-			StandardPlane.anIntArray7980[i_6_] = -1;
+			StandardPlane.mapscapes[i_6_] = -1;
 			Class144.anIntArray1789[i_6_] = -1;
 			Class42.anIntArray645[i_6_] = -1;
 			ProducingGraphicsBuffer.anIntArray9895[i_6_] = -1;

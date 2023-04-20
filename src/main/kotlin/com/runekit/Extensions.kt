@@ -3,6 +3,8 @@ package com.runekit
 import org.jdesktop.swingx.JXButton
 import org.jdesktop.swingx.JXPanel
 import java.awt.*
+import java.awt.datatransfer.DataFlavor
+import java.awt.datatransfer.Transferable
 import java.awt.geom.AffineTransform
 import java.awt.image.AffineTransformOp
 import java.awt.image.BufferedImage
@@ -24,10 +26,10 @@ const val discordLink: String = "https://discord.gg/jDbBAKjhxh"
 val borderColor: Color = Color.decode("#49422d")
 val backgroundColor: Color = Color.decode("#181818")
 var pluginView = false
-var frameDimensions = Dimension(if(pluginView) 1050 else 780, 540)
+var frameDimensions = Dimension(if (pluginView) 1050 else 780, 540)
 var manuallyResizing = true
 
-fun buildIcon(location: String, width: Int, height: Int, x: Int = 0, y: Int = 0) : JLabel {
+fun buildIcon(location: String, width: Int, height: Int, x: Int = 0, y: Int = 0): JLabel {
     val background = JLabel()
     val image = ImageIcon(RuneKit::class.java.getResource(location))
     background.icon = resizeIcon(image, width, height)
@@ -80,7 +82,7 @@ fun JXPanel.button(icon: ImageIcon, rolloverIcon: ImageIcon, init: JButton.() ->
 }
 
 
-fun flipIcon(icon: Icon) : Icon {
+fun flipIcon(icon: Icon): Icon {
     val image = (icon as ImageIcon).image
     val newIcon = ImageIcon(
         image.getScaledInstance(
@@ -92,6 +94,7 @@ fun flipIcon(icon: Icon) : Icon {
     newIcon.image = createFlippedImage(image)
     return newIcon
 }
+
 fun createFlippedImage(image: Image): Image {
     val bufferedImage = BufferedImage(image.getWidth(null), image.getHeight(null), BufferedImage.TYPE_INT_ARGB)
     val g = bufferedImage.createGraphics()
@@ -140,7 +143,35 @@ fun captureScreenshot() {
 
         // Write the image to the file as a PNG
         ImageIO.write(image, "png", file)
+
+        // Get the system clipboard
+        val clipboard = Toolkit.getDefaultToolkit().systemClipboard
+
+        // Convert the image to a transferable object
+        val transferable = ImageSelection(image)
+
+        // Copy the image to the clipboard
+        clipboard.setContents(transferable, null)
     } catch (ex: Exception) {
         ex.printStackTrace()
+    }
+}
+
+class ImageSelection(private val image: BufferedImage) : Transferable {
+    private val flavors = arrayOf(DataFlavor.imageFlavor)
+
+    override fun getTransferData(flavor: DataFlavor): Any? {
+        if (flavor == DataFlavor.imageFlavor) {
+            return image
+        }
+        return null
+    }
+
+    override fun isDataFlavorSupported(flavor: DataFlavor): Boolean {
+        return flavor in flavors
+    }
+
+    override fun getTransferDataFlavors(): Array<DataFlavor> {
+        return flavors
     }
 }

@@ -47,13 +47,13 @@ abstract class CacheNode_Sub14 extends CacheNode
 				int i_5_ = -i + 255;
 				float f = (float) i / 255.0F;
 				float f_6_ = -f + 1.0F;
-				Class320_Sub20.anInt8402 = (~0xff00ff & i_5_ * (0xff00ff & Class20_Sub1.aClass343_5509.anInt4253) + (0xff00ff & Class188_Sub2_Sub2.anInt9360) * i) - -(i * (0xff00 & Class188_Sub2_Sub2.anInt9360) - -(i_5_ * (0xff00 & Class20_Sub1.aClass343_5509.anInt4253)) & 0xff0000) >>> 8;
+				Class320_Sub20.anInt8402 = (~0xff00ff & i_5_ * (0xff00ff & Class20_Sub1.aClass343_5509.lightColor) + (0xff00ff & Class188_Sub2_Sub2.anInt9360) * i) - -(i * (0xff00 & Class188_Sub2_Sub2.anInt9360) - -(i_5_ * (0xff00 & Class20_Sub1.aClass343_5509.lightColor)) & 0xff0000) >>> 8;
 				Node_Sub25.aFloat7236 = Class329.aFloat4117 + (-Class329.aFloat4117 + Class20_Sub1.aClass343_5509.aFloat4254) * f_6_;
 				CacheNode_Sub16_Sub2.aFloat11082 = f_6_ * (-CacheNode_Sub17.aFloat8847 + Class20_Sub1.aClass343_5509.aFloat4256) + CacheNode_Sub17.aFloat8847;
 				Node_Sub12.anInt5455 = Node_Sub52.anInt7644 * i - -(Class20_Sub1.aClass343_5509.anInt4258 * i_5_) >> 8;
 				Class363.aFloat4502 = (Class20_Sub1.aClass343_5509.aFloat4250 - Class357.aFloat4439) * f_6_ + Class357.aFloat4439;
 				Animable.aFloat5932 = Animable_Sub3_Sub1.aFloat11014 + (-Animable_Sub3_Sub1.aFloat11014 + Class20_Sub1.aClass343_5509.aFloat4251) * f_6_;
-				Class138.anInt1726 = (i_5_ * (0xff00ff & Class20_Sub1.aClass343_5509.anInt4257) + (0xff00ff & Class191.anInt2353) * i & ~0xff00ff) + (0xff0000 & i * (0xff00 & Class191.anInt2353) + (0xff00 & Class20_Sub1.aClass343_5509.anInt4257) * i_5_) >>> 8;
+				Class138.anInt1726 = (i_5_ * (0xff00ff & Class20_Sub1.aClass343_5509.fogColor) + (0xff00ff & Class191.anInt2353) * i & ~0xff00ff) + (0xff0000 & i * (0xff00 & Class191.anInt2353) + (0xff00 & Class20_Sub1.aClass343_5509.fogColor) * i_5_) >>> 8;
 				Class69.aFloat944 = Class284.aFloat3597 + (Class20_Sub1.aClass343_5509.aFloat4244 - Class284.aFloat3597) * f_6_;
 				Class39.aFloat580 = f_6_ * (-Class113.aFloat1439 + Class20_Sub1.aClass343_5509.aFloat4239) + Class113.aFloat1439;
 				if (Class44.aClass270_669 != Class20_Sub1.aClass343_5509.aClass270_4240) {
@@ -73,14 +73,14 @@ abstract class CacheNode_Sub14 extends CacheNode
 					}
 				}
 			} else {
-				Class320_Sub20.anInt8402 = Class20_Sub1.aClass343_5509.anInt4253;
+				Class320_Sub20.anInt8402 = Class20_Sub1.aClass343_5509.lightColor;
 				Animable.aFloat5932 = Class20_Sub1.aClass343_5509.aFloat4251;
 				Node_Sub25.aFloat7236 = Class20_Sub1.aClass343_5509.aFloat4254;
 				Class69.aFloat944 = Class20_Sub1.aClass343_5509.aFloat4244;
 				Class363.aFloat4502 = Class20_Sub1.aClass343_5509.aFloat4250;
 				Class229.aClass270_2733 = Class20_Sub1.aClass343_5509.aClass270_4240;
 				Node_Sub12.anInt5455 = Class20_Sub1.aClass343_5509.anInt4258;
-				Class138.anInt1726 = Class20_Sub1.aClass343_5509.anInt4257;
+				Class138.anInt1726 = Class20_Sub1.aClass343_5509.fogColor;
 				CacheNode_Sub16_Sub2.aFloat11082 = Class20_Sub1.aClass343_5509.aFloat4256;
 				Class39.aFloat580 = Class20_Sub1.aClass343_5509.aFloat4239;
 				if (Class245.aClass119_3085 != null) {

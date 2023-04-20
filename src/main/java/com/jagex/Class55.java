@@ -103,7 +103,7 @@ public class Class55
 		anInt826++;
 		Class229.aGraphicsToolkit2732.xa(((float) Class213.aNode_Sub27_2512.aClass320_Sub22_7299.method3765(false) * 0.1F + 0.7F) * 1.1523438F);
 		Class229.aGraphicsToolkit2732.ZA(Class42.anInt649, 0.69921875F, 1.2F, -200.0F, -240.0F, -200.0F);
-		Class229.aGraphicsToolkit2732.L(Class320_Sub26.anInt8456, -1, 0);
+		Class229.aGraphicsToolkit2732.L(Class320_Sub26.fogColor, -1, 0);
 		Class229.aGraphicsToolkit2732.a(GraphicsToolkit.aClass270_1548);
 	}
 }

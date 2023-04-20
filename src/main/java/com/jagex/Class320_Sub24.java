@@ -47,7 +47,7 @@ public class Class320_Sub24 extends Class320
 		Class97.anInt1279 = i_2_;
 	}
 	
-	final int method3773(boolean bool) {
+	final int highDetailLighting(boolean bool) {
 		if (bool != false) {
 			method3675(-93, (byte) 21);
 		}

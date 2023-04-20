@@ -10,7 +10,7 @@ public class Class178
 	
 	static final void method1811(int i, byte[][] bs, Class277_Sub1 class277_sub1) {
 		anInt2121++;
-		int i_0_ = Class188_Sub1_Sub1.aByteArrayArray9334.length;
+		int i_0_ = Class188_Sub1_Sub1.mapsArray.length;
 		for (int i_1_ = 0; i_1_ < i_0_; i_1_++) {
 			byte[] bs_2_ = bs[i_1_];
 			if (bs_2_ != null) {

@@ -35,11 +35,23 @@ object Title {
                 height = PANEL_HEIGHT
             }
 
+            // Add the divider label
+            label {
+                text = "."
+                bounds = bounds.apply {
+                    x = 10
+                    y = 2
+                    width = 5
+                    height = 20
+                }
+                foreground = Color.decode("#c8bd9e")
+            }
+
             // Add the label for the application title
             label {
                 text = appTitle
                 bounds = bounds.apply {
-                    x = 15
+                    x = 17
                     width = frameDimensions.width
                     height = PANEL_HEIGHT
                 }
@@ -49,7 +61,7 @@ object Title {
             // Add the close button
             button(icon("/title-bar/close.png"), icon("/title-bar/close-hover.png")) {
                 bounds = bounds.apply {
-                    x = frameDimensions.width - 30
+                    x = frameDimensions.width - 25
                     y = 7
                 }
                 addActionListener {
@@ -60,7 +72,7 @@ object Title {
             // Add the maximize button
             button(icon("/title-bar/maximize.png"), icon("/title-bar/maximize-hover.png")) {
                 bounds = bounds.apply {
-                    x = frameDimensions.width - 55
+                    x = frameDimensions.width - 50
                     y = 7
                 }
             }
@@ -68,7 +80,7 @@ object Title {
             // Add the minimize button
             button(icon("/title-bar/minimize.png"), icon("/title-bar/minimize-hover.png")) {
                 bounds = bounds.apply {
-                    x = frameDimensions.width - 80
+                    x = frameDimensions.width - 75
                     y = 7
                 }
                 addActionListener {
@@ -84,7 +96,7 @@ object Title {
             label {
                 text = "."
                 bounds = bounds.apply {
-                    x = frameDimensions.width - 95
+                    x = frameDimensions.width - 90
                     y = 2
                     width = 5
                     height = 20
@@ -95,7 +107,7 @@ object Title {
             // Add the plugin button
             button(icon("/title-bar/plugin.png"), icon("/title-bar/plugin-hover.png")) {
                 bounds = bounds.apply {
-                    x = frameDimensions.width - 120
+                    x = frameDimensions.width - 115
                     y = 6
                 }
 
@@ -113,7 +125,7 @@ object Title {
             // Add the Discord button
             button(icon("/title-bar/discord.png"), icon("/title-bar/discord-hover.png")) {
                 bounds = bounds.apply {
-                    x = frameDimensions.width - 145
+                    x = frameDimensions.width - 135
                     y = 6
                 }
                 addActionListener {
@@ -124,7 +136,7 @@ object Title {
             // Add the Screenshot button
             button(icon("/title-bar/camera.png"), icon("/title-bar/camera-hover.png")) {
                 bounds = bounds.apply {
-                    x = frameDimensions.width - 170
+                    x = frameDimensions.width - 160
                     y = 6
                 }
                 addActionListener {

@@ -18,16 +18,16 @@ public class FloatBuffer extends Buffer
 		anInt9379++;
 		if (Class175.aClass261ArrayArrayArray2099 != null) {
 			Interface19 interface19 = null;
-			if ((node_sub19.anInt7166 ^ 0xffffffff) == -1) {
+			if ((~node_sub19.anInt7166) == -1) {
 				interface19 = (Interface19) Node_Sub38_Sub12.method2830(node_sub19.anInt7165, node_sub19.anInt7171, node_sub19.anInt7161);
 			}
-			if ((node_sub19.anInt7166 ^ 0xffffffff) == -2) {
+			if ((~node_sub19.anInt7166) == -2) {
 				interface19 = (Interface19) CacheNode_Sub8.method2320(node_sub19.anInt7165, node_sub19.anInt7171, node_sub19.anInt7161);
 			}
-			if ((node_sub19.anInt7166 ^ 0xffffffff) == -3) {
+			if ((~node_sub19.anInt7166) == -3) {
 				interface19 = (Interface19) Class262_Sub20.method3203(node_sub19.anInt7165, node_sub19.anInt7171, node_sub19.anInt7161, aClass9385 != null ? aClass9385 : (aClass9385 = method2253("com.jagex.Interface19")));
 			}
-			if ((node_sub19.anInt7166 ^ 0xffffffff) == -4) {
+			if ((~node_sub19.anInt7166) == -4) {
 				interface19 = (Interface19) Class270_Sub1_Sub1.method3303(node_sub19.anInt7165, node_sub19.anInt7171, node_sub19.anInt7161);
 			}
 			if (interface19 != null) {
@@ -50,7 +50,7 @@ public class FloatBuffer extends Buffer
 			return false;
 		}
 		anInt9380++;
-		return (Class73.method749((byte) -65, i, i_0_) | (0x2000 & i ^ 0xffffffff) != -1 | Class214.method2060(i, i_0_, 101)) & Class147.method1649(-120, i_0_, i);
+		return (Class73.method749((byte) -65, i, i_0_) | (~(0x2000 & i)) != -1 | Class214.method2060(i, i_0_, 101)) & Class147.method1649(-120, i_0_, i);
 	}
 	
 	static final boolean method2249(Class123 class123, int i) throws IOException {
@@ -88,7 +88,7 @@ public class FloatBuffer extends Buffer
 			class123.aClass192_1576 = class192s[i_2_];
 			class123.anInt1581 = class123.aClass192_1576.anInt2355;
 		}
-		if ((class123.anInt1581 ^ 0xffffffff) == 0) {
+		if ((~class123.anInt1581) == 0) {
 			if (!class365.method4068(1, 126)) {
 				return false;
 			}
@@ -107,7 +107,7 @@ public class FloatBuffer extends Buffer
 			class123.anInt1575 += 2;
 			class123.anInt1578 = 0;
 		}
-		if ((class123.anInt1581 ^ 0xffffffff) < -1) {
+		if ((~class123.anInt1581) < -1) {
 			if (!class365.method4068(class123.anInt1581, 38)) {
 				return false;
 			}
@@ -157,7 +157,7 @@ public class FloatBuffer extends Buffer
 			return true;
 		}
 		if (Class338.aClass192_4201 == class123.aClass192_1576) {
-			Class173.aString2085 = (class123.anInt1581 ^ 0xffffffff) >= -3 ? Class22.aClass22_389.method297(-12273, Class35.anInt537) : packet.method2195(-1);
+			Class173.aString2085 = (~class123.anInt1581) >= -3 ? Class22.aClass22_389.method297(-12273, Class35.anInt537) : packet.method2195(-1);
 			Class173.anInt2086 = class123.anInt1581 <= 0 ? -1 : packet.method2219(-130546744);
 			if (Class173.anInt2086 == 65535) {
 				Class173.anInt2086 = -1;
@@ -206,7 +206,7 @@ public class FloatBuffer extends Buffer
 		if (class123.aClass192_1576 == Class173.aClass192_2088) {
 			Class213.anInt2511 = Class345.anInt4270;
 			boolean bool = packet.method2233(255) == 1;
-			if ((class123.anInt1581 ^ 0xffffffff) == -2) {
+			if ((~class123.anInt1581) == -2) {
 				class123.aClass192_1576 = null;
 				if (!bool) {
 					Class51.aClanChat5345 = null;
@@ -224,7 +224,7 @@ public class FloatBuffer extends Buffer
 			return true;
 		}
 		if (class123.aClass192_1576 == Class238.aClass192_2913) {
-			boolean bool = (packet.method2233(255) ^ 0xffffffff) == -2;
+			boolean bool = (~packet.method2233(255)) == -2;
 			String string = packet.method2195(-1);
 			String string_14_ = string;
 			if (bool) {
@@ -240,22 +240,22 @@ public class FloatBuffer extends Buffer
 		while_82_:
 			do {
 				for (int i_21_ = 0; i_21_ < 100; i_21_++) {
-					if ((Class320_Sub22.aLongArray8423[i_21_] ^ 0xffffffffffffffffL) == (l_19_ ^ 0xffffffffffffffffL)) {
+					if ((~Class320_Sub22.aLongArray8423[i_21_]) == (~l_19_)) {
 						bool_20_ = true;
 						break while_82_;
 					}
 				}
-				if ((i_17_ ^ 0xffffffff) >= -2 && Node_Sub6.method2418(-27891, string_14_)) {
+				if ((~i_17_) >= -2 && Node_Sub6.method2418(-27891, string_14_)) {
 					bool_20_ = true;
 				}
 			} while (false);
-			if (!bool_20_ && (CacheNode_Sub17.anInt8835 ^ 0xffffffff) == -1) {
+			if (!bool_20_ && (~CacheNode_Sub17.anInt8835) == -1) {
 				Class320_Sub22.aLongArray8423[Class53.anInt807] = l_19_;
 				Class53.anInt807 = (Class53.anInt807 + 1) % 100;
 				String string_22_ = Node_Sub36_Sub1.aClass109_10035.method1128(i_18_, false).method2329((byte) -49, packet);
-				if ((i_17_ ^ 0xffffffff) == -3) {
+				if ((~i_17_) == -3) {
 					Node_Sub50.method2966("<img=1>" + string_14_, "<img=1>" + string, i_18_, string_22_, CacheNode_Sub6.method2313((byte) -128, l), false, 0, string, 20);
-				} else if ((i_17_ ^ 0xffffffff) == -2) {
+				} else if ((~i_17_) == -2) {
 					Node_Sub50.method2966("<img=0>" + string_14_, "<img=0>" + string, i_18_, string_22_, CacheNode_Sub6.method2313((byte) 97, l), false, 0, string, 20);
 				} else {
 					Node_Sub50.method2966(string_14_, string, i_18_, string_22_, CacheNode_Sub6.method2313((byte) -31, l), false, 0, string, 20);
@@ -274,8 +274,8 @@ public class FloatBuffer extends Buffer
 		}
 		if (class123.aClass192_1576 == Class51_Sub1.aClass192_9054) {
 			int i_23_ = packet.method2186(-55);
-			boolean bool = (packet.method2233(255) ^ 0xffffffff) == -2;
-			if (Class364.aBoolean4512 != bool || (Class270_Sub1.anInt8030 ^ 0xffffffff) != (i_23_ ^ 0xffffffff)) {
+			boolean bool = (~packet.method2233(255)) == -2;
+			if (Class364.aBoolean4512 != bool || (~Class270_Sub1.anInt8030) != (~i_23_)) {
 				Class270_Sub1.anInt8030 = i_23_;
 				Class364.aBoolean4512 = bool;
 				Class305.method3565(Widget.aClass212_4847, -1, -1);
@@ -312,8 +312,8 @@ public class FloatBuffer extends Buffer
 				if (node_sub43 == null) {
 					bool_29_ = true;
 				} else {
-					for (int i_30_ = 0; (i_30_ ^ 0xffffffff) > -101; i_30_++) {
-						if ((Class320_Sub22.aLongArray8423[i_30_] ^ 0xffffffffffffffffL) == (l_28_ ^ 0xffffffffffffffffL)) {
+					for (int i_30_ = 0; (~i_30_) > -101; i_30_++) {
+						if ((~Class320_Sub22.aLongArray8423[i_30_]) == (~l_28_)) {
 							bool_29_ = true;
 							break while_83_;
 						}
@@ -328,8 +328,8 @@ public class FloatBuffer extends Buffer
 				Class53.anInt807 = (1 + Class53.anInt807) % 100;
 				String string_31_ = Node_Sub36_Sub1.aClass109_10035.method1128(i_27_, false).method2329((byte) -49, packet);
 				int i_32_ = bool ? 42 : 45;
-				if ((i_26_ ^ 0xffffffff) != -3 && (i_26_ ^ 0xffffffff) != -4) {
-					if ((i_26_ ^ 0xffffffff) == -2) {
+				if ((~i_26_) != -3 && (~i_26_) != -4) {
+					if ((~i_26_) == -2) {
 						Node_Sub50.method2966("<img=0>" + string, "<img=0>" + string, i_27_, string_31_, node_sub43.aString7544, false, 0, string, i_32_);
 					} else {
 						Node_Sub50.method2966(string, string, i_27_, string_31_, node_sub43.aString7544, false, 0, string, i_32_);
@@ -348,7 +348,7 @@ public class FloatBuffer extends Buffer
 					Class270_Sub2.aPlayerArray8038[i_33_].anAnimator10876.method249(true, -1);
 				}
 			}
-			for (int i_34_ = 0; (i_34_ ^ 0xffffffff) > (Node_Sub32.anInt7380 ^ 0xffffffff); i_34_++) {
+			for (int i_34_ = 0; (~i_34_) > (~Node_Sub32.anInt7380); i_34_++) {
 				Class314.aNode_Sub41Array4017[i_34_].aNpc7518.anIntArray10817 = null;
 				Class314.aNode_Sub41Array4017[i_34_].aNpc7518.anAnimator10876.method249(true, -1);
 			}
@@ -361,7 +361,7 @@ public class FloatBuffer extends Buffer
 			return true;
 		}
 		if (Class20_Sub1.aClass192_5512 == class123.aClass192_1576) {
-			Class171.aBoolean2058 = (packet.method2213((byte) 119) ^ 0xffffffff) == -2;
+			Class171.aBoolean2058 = (~packet.method2213((byte) 119)) == -2;
 			class123.aClass192_1576 = null;
 			return true;
 		}
@@ -373,7 +373,7 @@ public class FloatBuffer extends Buffer
 		if (class123.aClass192_1576 == Node_Sub32.aClass192_7376) {
 			int i_35_ = packet.method2177(-13578);
 			int i_36_ = packet.method2224(-602457616);
-			if ((i_36_ ^ 0xffffffff) == -65536) {
+			if ((~i_36_) == -65536) {
 				i_36_ = -1;
 			}
 			InputStream_Sub2.method129(-1);
@@ -392,19 +392,23 @@ public class FloatBuffer extends Buffer
 			return false;
 		}
 		if (class123.aClass192_1576 == Class168.aClass192_2045) {
-			while ((packet.anInt7002 ^ 0xffffffff) > (class123.anInt1581 ^ 0xffffffff)) {
+			System.out.println(~packet.anInt7002);
+			System.out.println(~class123.anInt1581);
+			while ((~packet.anInt7002) > (~class123.anInt1581)) {
 				boolean bool = packet.method2233(255) == 1;
 				String string = packet.method2195(-1);
 				String string_37_ = packet.method2195(-1);
 				int i_38_ = packet.method2219(-130546744);
 				int i_39_ = packet.method2233(255);
-				boolean bool_40_ = (packet.method2233(255) ^ 0xffffffff) == -2;
+				boolean bool_40_ = (~packet.method2233(255)) == -2;
 				String string_41_ = "";
 				boolean bool_42_ = false;
 				if (i_38_ > 0) {
 					string_41_ = packet.method2195(-1);
-					bool_42_ = (packet.method2233(255) ^ 0xffffffff) == -2;
+					bool_42_ = (~packet.method2233(255)) == -2;
 				}
+				System.out.println(string);
+				System.out.println(i_38_);
 				for (int i_43_ = 0; i_43_ < Node_Sub38_Sub14.anInt10242; i_43_++) {
 					if (bool) {
 						if (string_37_.equals(Class262_Sub12.aStringArray7793[i_43_])) {
@@ -414,12 +418,12 @@ public class FloatBuffer extends Buffer
 							break;
 						}
 					} else if (string.equals(Class262_Sub12.aStringArray7793[i_43_])) {
-						if ((Class202.anIntArray2448[i_43_] ^ 0xffffffff) != (i_38_ ^ 0xffffffff)) {
+						if ((~Class202.anIntArray2448[i_43_]) != (~i_38_)) {
 							boolean bool_44_ = true;
 							for (EntityNode_Sub3_Sub1 entitynode_sub3_sub1 = (EntityNode_Sub3_Sub1) Class97.aClass103_1277.method1113((byte) -48); entitynode_sub3_sub1 != null; entitynode_sub3_sub1 = (EntityNode_Sub3_Sub1) Class97.aClass103_1277.method1108(100)) {
 								if (entitynode_sub3_sub1.aString9156.equals(string)) {
 									if (i_38_ == 0 || entitynode_sub3_sub1.aShort9164 != 0) {
-										if (i_38_ == 0 && (entitynode_sub3_sub1.aShort9164 ^ 0xffffffff) != -1) {
+										if (i_38_ == 0 && (~entitynode_sub3_sub1.aShort9164) != -1) {
 											bool_44_ = false;
 											entitynode_sub3_sub1.method803(false);
 										}
@@ -461,12 +465,12 @@ public class FloatBuffer extends Buffer
 			while (i_45_ > 0) {
 				bool = true;
 				i_45_--;
-				for (int i_46_ = 0; (i_45_ ^ 0xffffffff) < (i_46_ ^ 0xffffffff); i_46_++) {
+				for (int i_46_ = 0; (~i_45_) < (~i_46_); i_46_++) {
 					boolean bool_47_ = false;
-					if ((Class181.aClass197_2155.worldId ^ 0xffffffff) != (Class202.anIntArray2448[i_46_] ^ 0xffffffff) && Class181.aClass197_2155.worldId == Class202.anIntArray2448[1 + i_46_]) {
+					if ((~Class181.aClass197_2155.worldId) != (~Class202.anIntArray2448[i_46_]) && Class181.aClass197_2155.worldId == Class202.anIntArray2448[1 + i_46_]) {
 						bool_47_ = true;
 					}
-					if (!bool_47_ && Class202.anIntArray2448[i_46_] == 0 && (Class202.anIntArray2448[i_46_ - -1] ^ 0xffffffff) != -1) {
+					if (!bool_47_ && Class202.anIntArray2448[i_46_] == 0 && (~Class202.anIntArray2448[i_46_ - -1]) != -1) {
 						bool_47_ = true;
 					}
 					if (!bool_47_ && !Class232.aBooleanArray2781[i_46_] && Class232.aBooleanArray2781[1 + i_46_]) {
@@ -529,7 +533,7 @@ public class FloatBuffer extends Buffer
 		}
 		if (class123.aClass192_1576 == Class278.aClass192_3542) {
 			int i_59_ = packet.method2219(-130546744);
-			if ((i_59_ ^ 0xffffffff) == -65536) {
+			if ((~i_59_) == -65536) {
 				i_59_ = -1;
 			}
 			int i_60_ = packet.method2233(255);
@@ -550,7 +554,7 @@ public class FloatBuffer extends Buffer
 		if (class123.aClass192_1576 == Class153.aClass192_1946) {
 			int i_65_ = packet.method2177(-13578);
 			int i_66_ = packet.method2243(false);
-			if ((i_66_ ^ 0xffffffff) == -65536) {
+			if ((~i_66_) == -65536) {
 				i_66_ = -1;
 			}
 			InputStream_Sub2.method129(-1);
@@ -564,7 +568,7 @@ public class FloatBuffer extends Buffer
 			boolean bool = (i_68_ & 0x1) == 1;
 			Class262_Sub6.method3164(i_67_, bool, (byte) 65);
 			int i_69_ = packet.method2219(-130546744);
-			for (int i_70_ = 0; (i_70_ ^ 0xffffffff) > (i_69_ ^ 0xffffffff); i_70_++) {
+			for (int i_70_ = 0; (~i_70_) > (~i_69_); i_70_++) {
 				int i_71_ = packet.method2233(255);
 				if (i_71_ == 255) {
 					i_71_ = packet.method2186(-108);
@@ -628,9 +632,9 @@ public class FloatBuffer extends Buffer
 				int i_83_ = packet.method2227(true);
 				int i_84_ = packet.method2219(-130546744);
 				int i_85_ = 0;
-				if ((i_84_ ^ 0xffffffff) != -1) {
+				if ((~i_84_) != -1) {
 					i_85_ = packet.method2233(255);
-					if ((i_85_ ^ 0xffffffff) == -256) {
+					if ((~i_85_) == -256) {
 						i_85_ = packet.method2186(93);
 					}
 				}
@@ -643,8 +647,8 @@ public class FloatBuffer extends Buffer
 		if (Class339_Sub5.aClass192_8685 == class123.aClass192_1576) {
 			String string = packet.method2195(-1);
 			Object[] objects = new Object[1 + string.length()];
-			for (int i_86_ = string.length() + -1; (i_86_ ^ 0xffffffff) <= -1; i_86_--) {
-				if ((string.charAt(i_86_) ^ 0xffffffff) == -116) {
+			for (int i_86_ = string.length() + -1; (~i_86_) <= -1; i_86_--) {
+				if ((~string.charAt(i_86_)) == -116) {
 					objects[i_86_ - -1] = packet.method2195(-1);
 				} else {
 					objects[1 + i_86_] = new Integer(packet.method2186(-103));
@@ -676,14 +680,14 @@ public class FloatBuffer extends Buffer
 			int i_89_ = packet.method2243(false);
 			int i_90_ = packet.method2213((byte) 115);
 			InputStream_Sub2.method129(-1);
-			if ((i_90_ ^ 0xffffffff) == -3) {
+			if ((~i_90_) == -3) {
 				Class169.method1760(true);
 			}
 			Class320_Sub15.anInt8355 = i_89_;
 			Node_Sub11.method2543(i_89_, 0);
 			Node_Sub29_Sub3.method2717(1, false);
 			Class305.method3550(Class320_Sub15.anInt8355);
-			for (int i_91_ = 0; (i_91_ ^ 0xffffffff) > -101; i_91_++)
+			for (int i_91_ = 0; (~i_91_) > -101; i_91_++)
 				Class195.aBooleanArray2387[i_91_] = true;
 			class123.aClass192_1576 = null;
 			return true;
@@ -696,7 +700,7 @@ public class FloatBuffer extends Buffer
 		if (class123.aClass192_1576 == EntityNode_Sub2.aClass192_5952) {
 			int i_92_ = packet.method2238(true);
 			int[] is = new int[4];
-			for (int i_93_ = 0; (i_93_ ^ 0xffffffff) > -5; i_93_++)
+			for (int i_93_ = 0; (~i_93_) > -5; i_93_++)
 				is[i_93_] = packet.method2243(false);
 			int i_94_ = packet.method2224(-602457616);
 			Node_Sub41 node_sub41 = (Node_Sub41) Class12.aHashTable187.method1518(3512, (long) i_94_);
@@ -721,7 +725,7 @@ public class FloatBuffer extends Buffer
 		if (Class169_Sub2.aClass192_8798 == class123.aClass192_1576) {
 			Class144_Sub3.aByte6822 = packet.method2214((byte) -86);
 			class123.aClass192_1576 = null;
-			if (Class144_Sub3.aByte6822 == 0 || (Class144_Sub3.aByte6822 ^ 0xffffffff) == -2) {
+			if (Class144_Sub3.aByte6822 == 0 || (~Class144_Sub3.aByte6822) == -2) {
 				Class312.aBoolean3960 = true;
 			}
 			return true;
@@ -758,12 +762,12 @@ public class FloatBuffer extends Buffer
 		if (Class181.aClass192_2144 == class123.aClass192_1576) {
 			int i_99_ = packet.method2176((byte) -125);
 			InputStream_Sub2.method129(-1);
-			if ((i_99_ ^ 0xffffffff) != 0) {
+			if ((~i_99_) != 0) {
 				int i_100_ = (0xffff5cc & i_99_) >> 14;
 				int i_101_ = 0x3fff & i_99_;
 				i_100_ -= Node_Sub53.anInt7668;
-				if ((i_100_ ^ 0xffffffff) <= -1) {
-					if ((Node_Sub54.anInt7675 ^ 0xffffffff) >= (i_100_ ^ 0xffffffff)) {
+				if ((~i_100_) <= -1) {
+					if ((~Node_Sub54.anInt7675) >= (~i_100_)) {
 						i_100_ = Node_Sub54.anInt7675;
 					}
 				} else {
@@ -773,7 +777,7 @@ public class FloatBuffer extends Buffer
 				Class367.anInt4541 = (i_100_ << 9) - -256;
 				if (i_101_ < 0) {
 					i_101_ = 0;
-				} else if ((i_101_ ^ 0xffffffff) <= (Class377_Sub1.anInt8774 ^ 0xffffffff)) {
+				} else if ((~i_101_) <= (~Class377_Sub1.anInt8774)) {
 					i_101_ = Class377_Sub1.anInt8774;
 				}
 				Class368.anInt4551 = (i_101_ << 9) + 256;
@@ -808,8 +812,8 @@ public class FloatBuffer extends Buffer
 			Node_Sub15_Sub10.aClass302_9853.method3510(Class200_Sub2.anInt4935, (byte) 63);
 			int i_104_ = packet.method2219(-130546744);
 			Class169.anIntArrayArray4954 = new int[i_104_][4];
-			for (int i_105_ = 0; (i_104_ ^ 0xffffffff) < (i_105_ ^ 0xffffffff); i_105_++) {
-				for (int i_106_ = 0; (i_106_ ^ 0xffffffff) > -5; i_106_++)
+			for (int i_105_ = 0; (~i_104_) < (~i_105_); i_105_++) {
+				for (int i_106_ = 0; (~i_106_) > -5; i_106_++)
 					Class169.anIntArrayArray4954[i_105_][i_106_] = packet.method2186(-123);
 			}
 			int i_107_ = packet.method2233(255);
@@ -826,12 +830,12 @@ public class FloatBuffer extends Buffer
 			byte[] bs = new byte[class123.anInt1581];
 			packet.method2260(bs, class123.anInt1581, 0, true);
 			String string = Class184.method1846(0, bs, class123.anInt1581, (byte) -111);
-			Class355.method4017(-70, (Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791(false) ^ 0xffffffff) == -2, string, true, Class240.aSignLink2946);
+			Class355.method4017(-70, (~Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791(false)) == -2, string, true, Class240.aSignLink2946);
 			class123.aClass192_1576 = null;
 			return true;
 		}
 		if (class123.aClass192_1576 == NpcDefinition.aClass192_2884) {
-			boolean bool = (packet.method2233(255) ^ 0xffffffff) == -2;
+			boolean bool = (~packet.method2233(255)) == -2;
 			String string = packet.method2195(-1);
 			String string_108_ = string;
 			if (bool) {
@@ -855,11 +859,11 @@ public class FloatBuffer extends Buffer
 					bool_113_ = true;
 				}
 			} while (false);
-			if (!bool_113_ && (CacheNode_Sub17.anInt8835 ^ 0xffffffff) == -1) {
+			if (!bool_113_ && (~CacheNode_Sub17.anInt8835) == -1) {
 				Class320_Sub22.aLongArray8423[Class53.anInt807] = l_112_;
 				Class53.anInt807 = (Class53.anInt807 - -1) % 100;
 				String string_115_ = Node_Sub36_Sub1.aClass109_10035.method1128(i_111_, false).method2329((byte) -49, packet);
-				if ((i_110_ ^ 0xffffffff) != -3) {
+				if ((~i_110_) != -3) {
 					if (i_110_ != 1) {
 						Node_Sub50.method2966(string_108_, string, i_111_, string_115_, null, false, 0, string, 18);
 					} else {
@@ -888,7 +892,7 @@ public class FloatBuffer extends Buffer
 			Class34_Sub1.anIntArray5528[i_119_] = 1;
 			int i_121_ = -1 + Class134.anIntArray5319[i_119_];
 			for (int i_122_ = 0; i_121_ > i_122_; i_122_++) {
-				if ((HashTable.anIntArray1594[i_122_] ^ 0xffffffff) >= (i_120_ ^ 0xffffffff)) {
+				if ((~HashTable.anIntArray1594[i_122_]) >= (~i_120_)) {
 					Class34_Sub1.anIntArray5528[i_119_] = i_122_ - -2;
 				}
 			}
@@ -912,7 +916,7 @@ public class FloatBuffer extends Buffer
 			return true;
 		}
 		if (class123.aClass192_1576 == Class144.aClass192_1786) {
-			boolean bool = (packet.method2233(255) ^ 0xffffffff) == -2;
+			boolean bool = (~packet.method2233(255)) == -2;
 			String string = packet.method2195(-1);
 			long l = (long) packet.method2219(-130546744);
 			long l_127_ = (long) packet.method2220(1819759595);
@@ -926,7 +930,7 @@ public class FloatBuffer extends Buffer
 				if (node_sub43 == null) {
 					bool_130_ = true;
 				} else {
-					for (int i_131_ = 0; (i_131_ ^ 0xffffffff) > -101; i_131_++) {
+					for (int i_131_ = 0; (~i_131_) > -101; i_131_++) {
 						if (l_129_ == Class320_Sub22.aLongArray8423[i_131_]) {
 							bool_130_ = true;
 							break while_85_;
@@ -941,12 +945,12 @@ public class FloatBuffer extends Buffer
 					}
 				}
 			} while (false);
-			if (!bool_130_ && (CacheNode_Sub17.anInt8835 ^ 0xffffffff) == -1) {
+			if (!bool_130_ && (~CacheNode_Sub17.anInt8835) == -1) {
 				Class320_Sub22.aLongArray8423[Class53.anInt807] = l_129_;
 				Class53.anInt807 = (1 + Class53.anInt807) % 100;
 				String string_132_ = Class67.method730(false, Node_Sub3.method2172((byte) -72, packet));
 				int i_133_ = !bool ? 44 : 41;
-				if ((i_128_ ^ 0xffffffff) != -3 && (i_128_ ^ 0xffffffff) != -4) {
+				if ((~i_128_) != -3 && (~i_128_) != -4) {
 					if (i_128_ != 1) {
 						Node_Sub50.method2966(string, string, -1, string_132_, node_sub43.aString7544, false, 0, string, i_133_);
 					} else {
@@ -963,7 +967,7 @@ public class FloatBuffer extends Buffer
 			int i_134_ = packet.method2233(255);
 			int i_135_ = i_134_ >> 5;
 			int i_136_ = i_134_ & 0x1f;
-			if ((i_136_ ^ 0xffffffff) == -1) {
+			if ((~i_136_) == -1) {
 				Class320_Sub24.aClass223Array8438[i_135_] = null;
 				class123.aClass192_1576 = null;
 				return true;
@@ -972,7 +976,7 @@ public class FloatBuffer extends Buffer
 			class223.anInt2654 = i_136_;
 			class223.anInt2659 = packet.method2233(255);
 			if (class223.anInt2659 >= 0 && class223.anInt2659 < Class19.aGLSpriteArray312.length) {
-				if ((class223.anInt2654 ^ 0xffffffff) != -2 && (class223.anInt2654 ^ 0xffffffff) != -11) {
+				if ((~class223.anInt2654) != -2 && (~class223.anInt2654) != -11) {
 					if (class223.anInt2654 >= 2 && class223.anInt2654 <= 6) {
 						if (class223.anInt2654 == 2) {
 							class223.anInt2653 = 256;
@@ -982,11 +986,11 @@ public class FloatBuffer extends Buffer
 							class223.anInt2662 = 0;
 							class223.anInt2653 = 256;
 						}
-						if ((class223.anInt2654 ^ 0xffffffff) == -5) {
+						if ((~class223.anInt2654) == -5) {
 							class223.anInt2662 = 512;
 							class223.anInt2653 = 256;
 						}
-						if ((class223.anInt2654 ^ 0xffffffff) == -6) {
+						if ((~class223.anInt2654) == -6) {
 							class223.anInt2653 = 0;
 							class223.anInt2662 = 256;
 						}
@@ -1032,7 +1036,7 @@ public class FloatBuffer extends Buffer
 		}
 		if (class123.aClass192_1576 == Class290_Sub5.aClass192_8103) {
 			int i_138_ = packet.method2209((byte) -114);
-			if ((i_138_ ^ 0xffffffff) == -65536) {
+			if ((~i_138_) == -65536) {
 				i_138_ = -1;
 			}
 			int i_139_ = packet.method2186(-73);
@@ -1054,7 +1058,7 @@ public class FloatBuffer extends Buffer
 			return true;
 		}
 		if (class123.aClass192_1576 == Class257.aClass192_3245) {
-			boolean bool = (packet.method2238(true) ^ 0xffffffff) == -2;
+			boolean bool = (~packet.method2238(true)) == -2;
 			InputStream_Sub2.method129(-1);
 			Class377_Sub1.aBoolean8778 = bool;
 			class123.aClass192_1576 = null;
@@ -1090,17 +1094,17 @@ public class FloatBuffer extends Buffer
 			int i_147_ = packet.method2233(255);
 			String string = "";
 			String string_148_ = string;
-			if ((i_147_ & 0x1 ^ 0xffffffff) != -1) {
+			if ((~(i_147_ & 0x1)) != -1) {
 				string = packet.method2195(-1);
-				if ((i_147_ & 0x2 ^ 0xffffffff) == -1) {
+				if ((~(i_147_ & 0x2)) == -1) {
 					string_148_ = string;
 				} else {
 					string_148_ = packet.method2195(-1);
 				}
 			}
 			String string_149_ = packet.method2195(-1);
-			if ((i_145_ ^ 0xffffffff) != -100) {
-				if ((i_145_ ^ 0xffffffff) != -99) {
+			if ((~i_145_) != -100) {
+				if ((~i_145_) != -99) {
 					if (!string_148_.equals("") && Node_Sub6.method2418(-27891, string_148_)) {
 						class123.aClass192_1576 = null;
 						return true;
@@ -1150,7 +1154,7 @@ public class FloatBuffer extends Buffer
 		}
 		if (Class123.aClass192_1562 == class123.aClass192_1576) {
 			Class235.anInt5122 = packet.method2233(255);
-			for (int i_156_ = 0; (Class235.anInt5122 ^ 0xffffffff) < (i_156_ ^ 0xffffffff); i_156_++) {
+			for (int i_156_ = 0; (~Class235.anInt5122) < (~i_156_); i_156_++) {
 				Class338.aStringArray4197[i_156_] = packet.method2195(-1);
 				Class240.aStringArray2949[i_156_] = packet.method2195(-1);
 				if (Class240.aStringArray2949[i_156_].equals("")) {
@@ -1175,12 +1179,12 @@ public class FloatBuffer extends Buffer
 		if (Node_Sub25_Sub1.aClass192_9948 == class123.aClass192_1576) {
 			int i_157_ = packet.method2211(4255);
 			int i_158_ = packet.method2209((byte) -108);
-			if ((i_158_ ^ 0xffffffff) == -65536) {
+			if ((~i_158_) == -65536) {
 				i_158_ = -1;
 			}
 			String string = packet.method2195(-1);
 			int i_159_ = packet.method2238(true);
-			if ((i_159_ ^ 0xffffffff) <= -2 && i_159_ <= 8) {
+			if ((~i_159_) <= -2 && i_159_ <= 8) {
 				if (string.equalsIgnoreCase("null")) {
 					string = null;
 				}
@@ -1198,17 +1202,17 @@ public class FloatBuffer extends Buffer
 			}
 			int i_161_ = packet.method2208(true);
 			int i_162_ = packet.method2219(-130546744);
-			if ((i_162_ ^ 0xffffffff) == -65536) {
+			if ((~i_162_) == -65536) {
 				i_162_ = -1;
 			}
 			int i_163_ = packet.method2209((byte) 46);
 			InputStream_Sub2.method129(-1);
-			for (int i_164_ = i_160_; (i_162_ ^ 0xffffffff) <= (i_164_ ^ 0xffffffff); i_164_++) {
+			for (int i_164_ = i_160_; (~i_162_) <= (~i_164_); i_164_++) {
 				long l = (long) i_164_ + ((long) i_161_ << 32);
 				Node_Sub35 node_sub35 = (Node_Sub35) Class156.aHashTable1964.method1518(3512, l);
 				Node_Sub35 node_sub35_165_;
 				if (node_sub35 == null) {
-					if ((i_164_ ^ 0xffffffff) != 0) {
+					if ((~i_164_) != 0) {
 						node_sub35_165_ = new Node_Sub35(0, i_163_);
 					} else {
 						node_sub35_165_ = new Node_Sub35(Class76.method771((byte) 107, i_161_).aNode_Sub35_4840.anInt7418, i_163_);
@@ -1262,10 +1266,10 @@ public class FloatBuffer extends Buffer
 			if (i_177_ == 15) {
 				i_177_ = -1;
 			}
-			boolean bool = ((0xc4 & i_173_) >> 7 ^ 0xffffffff) == -2;
-			if ((i_171_ >> 30 ^ 0xffffffff) == -1) {
+			boolean bool = (~((0xc4 & i_173_) >> 7)) == -2;
+			if ((~(i_171_ >> 30)) == -1) {
 				if (i_171_ >> 29 == 0) {
-					if ((i_171_ >> 28 ^ 0xffffffff) != -1) {
+					if ((~(i_171_ >> 28)) != -1) {
 						int i_178_ = 0xffff & i_171_;
 						Player player;
 						if (i_178_ != Class166.anInt5099) {
@@ -1280,11 +1284,11 @@ public class FloatBuffer extends Buffer
 							}
 							boolean bool_179_ = true;
 							int i_180_ = class165.anInt2030;
-							if ((i_175_ ^ 0xffffffff) != 0 && i_180_ != -1) {
-								if ((i_175_ ^ 0xffffffff) != (i_180_ ^ 0xffffffff)) {
+							if ((~i_175_) != 0 && i_180_ != -1) {
+								if ((~i_175_) != (~i_180_)) {
 									Class195 class195 = Class16.aClass101_228.method1090(47, i_175_);
 									Class195 class195_181_ = Class16.aClass101_228.method1090(107, i_180_);
-									if ((class195.anInt2394 ^ 0xffffffff) != 0 && class195_181_.anInt2394 != -1) {
+									if ((~class195.anInt2394) != 0 && class195_181_.anInt2394 != -1) {
 										Class48 class48 = Class18.aClass37_306.method395(class195.anInt2394, (byte) -80);
 										Class48 class48_182_ = Class18.aClass37_306.method395(class195_181_.anInt2394, (byte) -81);
 										if (class48_182_.anInt710 > class48.anInt710) {
@@ -1296,7 +1300,7 @@ public class FloatBuffer extends Buffer
 									if (class195.aBoolean2402 && class195.anInt2394 != -1) {
 										Class48 class48 = Class18.aClass37_306.method395(class195.anInt2394, (byte) -115);
 										int i_183_ = class48.anInt706;
-										if ((i_183_ ^ 0xffffffff) == -1 || i_183_ == 2) {
+										if ((~i_183_) == -1 || i_183_ == 2) {
 											bool_179_ = false;
 										} else if (i_183_ == 1) {
 											bool_179_ = true;
@@ -1309,7 +1313,7 @@ public class FloatBuffer extends Buffer
 								class165.anInt2031 = i_174_;
 								class165.anInt2027 = i_176_;
 								class165.anInt2030 = i_175_;
-								if ((i_175_ ^ 0xffffffff) == 0) {
+								if ((~i_175_) == 0) {
 									class165.anAnimator2026.method249(true, -1);
 								} else {
 									Class195 class195 = Class16.aClass101_228.method1090(-85, i_175_);
@@ -1328,16 +1332,16 @@ public class FloatBuffer extends Buffer
 					if (node_sub41 != null) {
 						Npc npc = node_sub41.aNpc7518;
 						Class165 class165 = npc.aClass165Array10886[i_172_];
-						if ((i_175_ ^ 0xffffffff) == -65536) {
+						if ((~i_175_) == -65536) {
 							i_175_ = -1;
 						}
 						boolean bool_186_ = true;
 						int i_187_ = class165.anInt2030;
-						if ((i_175_ ^ 0xffffffff) != 0 && i_187_ != -1) {
+						if ((~i_175_) != 0 && i_187_ != -1) {
 							if (i_187_ != i_175_) {
 								Class195 class195 = Class16.aClass101_228.method1090(-105, i_175_);
 								Class195 class195_188_ = Class16.aClass101_228.method1090(58, i_187_);
-								if ((class195.anInt2394 ^ 0xffffffff) != 0 && (class195_188_.anInt2394 ^ 0xffffffff) != 0) {
+								if ((~class195.anInt2394) != 0 && (~class195_188_.anInt2394) != 0) {
 									Class48 class48 = Class18.aClass37_306.method395(class195.anInt2394, (byte) -102);
 									Class48 class48_189_ = Class18.aClass37_306.method395(class195_188_.anInt2394, (byte) -100);
 									if (class48.anInt710 < class48_189_.anInt710) {
@@ -1349,7 +1353,7 @@ public class FloatBuffer extends Buffer
 								if (class195.aBoolean2402 && class195.anInt2394 != -1) {
 									Class48 class48 = Class18.aClass37_306.method395(class195.anInt2394, (byte) -98);
 									int i_190_ = class48.anInt706;
-									if ((i_190_ ^ 0xffffffff) == -1 || (i_190_ ^ 0xffffffff) == -3) {
+									if ((~i_190_) == -1 || (~i_190_) == -3) {
 										bool_186_ = false;
 									} else if (i_190_ == 1) {
 										bool_186_ = true;
@@ -1378,7 +1382,7 @@ public class FloatBuffer extends Buffer
 				int i_192_ = (0x302ed082 & i_171_) >> 28;
 				int i_193_ = (i_171_ >> 14 & 0x3fff) - Node_Sub53.anInt7668;
 				int i_194_ = -Class320_Sub4.anInt8243 + (i_171_ & 0x3fff);
-				if (i_193_ >= 0 && (i_194_ ^ 0xffffffff) <= -1 && i_193_ < Node_Sub54.anInt7675 && (i_194_ ^ 0xffffffff) > (Class377_Sub1.anInt8774 ^ 0xffffffff)) {
+				if (i_193_ >= 0 && (~i_194_) <= -1 && i_193_ < Node_Sub54.anInt7675 && (~i_194_) > (~Class377_Sub1.anInt8774)) {
 					if (i_175_ == -1) {
 						CacheNode_Sub18 cachenode_sub18 = (CacheNode_Sub18) Class20_Sub1.aHashTable5508.method1518(3512, (long) (i_193_ << 16 | i_194_));
 						if (cachenode_sub18 != null) {
@@ -1403,7 +1407,7 @@ public class FloatBuffer extends Buffer
 		if (Class6.aClass192_136 == class123.aClass192_1576) {
 			int i_198_ = packet.method2186(70);
 			int i_199_ = packet.method2209((byte) -110);
-			if ((i_199_ ^ 0xffffffff) == -65536) {
+			if ((~i_199_) == -65536) {
 				i_199_ = -1;
 			}
 			InputStream_Sub2.method129(-1);
@@ -1429,7 +1433,7 @@ public class FloatBuffer extends Buffer
 			Node_Sub2 node_sub2 = (Node_Sub2) Class289.aHashTable3630.method1518(3512, (long) i_201_);
 			Node_Sub2 node_sub2_202_ = (Node_Sub2) Class289.aHashTable3630.method1518(3512, (long) i_200_);
 			if (node_sub2_202_ != null) {
-				Class243.method3060((byte) -22, false, node_sub2 == null || (node_sub2.anInt6933 ^ 0xffffffff) != (node_sub2_202_.anInt6933 ^ 0xffffffff), node_sub2_202_);
+				Class243.method3060((byte) -22, false, node_sub2 == null || (~node_sub2.anInt6933) != (~node_sub2_202_.anInt6933), node_sub2_202_);
 			}
 			if (node_sub2 != null) {
 				node_sub2.method2160((byte) 52);
@@ -1512,13 +1516,13 @@ public class FloatBuffer extends Buffer
 			boolean bool_220_ = false;
 		while_86_:
 			do {
-				for (int i_221_ = 0; (i_221_ ^ 0xffffffff) > -101; i_221_++) {
+				for (int i_221_ = 0; (~i_221_) > -101; i_221_++) {
 					if (Class320_Sub22.aLongArray8423[i_221_] == l_219_) {
 						bool_220_ = true;
 						break while_86_;
 					}
 				}
-				if ((i_218_ ^ 0xffffffff) >= -2) {
+				if ((~i_218_) >= -2) {
 					if (Node_Sub38_Sub18.aBoolean10282 && !Class24.aBoolean436 || Class290_Sub11.aBoolean8175) {
 						bool_220_ = true;
 					} else if (Node_Sub6.method2418(-27891, string_216_)) {
@@ -1530,9 +1534,9 @@ public class FloatBuffer extends Buffer
 				Class320_Sub22.aLongArray8423[Class53.anInt807] = l_219_;
 				Class53.anInt807 = (Class53.anInt807 + 1) % 100;
 				String string_222_ = Class67.method730(false, Node_Sub3.method2172((byte) -72, packet));
-				if ((i_218_ ^ 0xffffffff) == -3) {
+				if ((~i_218_) == -3) {
 					Node_Sub50.method2966("<img=1>" + string_216_, "<img=1>" + string, -1, string_222_, null, false, 0, string, 7);
-				} else if ((i_218_ ^ 0xffffffff) == -2) {
+				} else if ((~i_218_) == -2) {
 					Node_Sub50.method2966("<img=0>" + string_216_, "<img=0>" + string, -1, string_222_, null, false, 0, string, 7);
 				} else {
 					Node_Sub50.method2966(string_216_, string, -1, string_222_, null, false, 0, string, 3);
@@ -1544,7 +1548,7 @@ public class FloatBuffer extends Buffer
 		if (class123.aClass192_1576 == Class365_Sub1.aClass192_8766) {
 			int delay = packet.method2213((byte) 127);
 			int song = packet.method2209((byte) -109);
-			if ((song ^ 0xffffffff) == -65536) {
+			if ((~song) == -65536) {
 				song = -1;
 			}
 			int volume = packet.method2238(true);
@@ -1572,7 +1576,7 @@ public class FloatBuffer extends Buffer
 			String string = Class184.method1846(0, bs, class123.anInt1581, (byte) -126);
 			String string_229_ = "opensn";
 			if (!Animable_Sub2_Sub1.aBoolean10628 || Class188_Sub2_Sub1.method1910((byte) 84, Class240.aSignLink2946, string, string_229_, 1).anInt2953 == 2) {
-				Class140.method1610(0, string, string_229_, Class240.aSignLink2946, (Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791(false) ^ 0xffffffff) == -2, true);
+				Class140.method1610(0, string, string_229_, Class240.aSignLink2946, (~Class213.aNode_Sub27_2512.aClass320_Sub29_7270.method3791(false)) == -2, true);
 			}
 			class123.aClass192_1576 = null;
 			return true;
@@ -1609,7 +1613,7 @@ public class FloatBuffer extends Buffer
 		}
 		if (Node_Sub38_Sub18.aClass192_10277 == class123.aClass192_1576) {
 			int i_238_ = packet.method2219(-130546744);
-			if ((i_238_ ^ 0xffffffff) == -65536) {
+			if ((~i_238_) == -65536) {
 				i_238_ = -1;
 			}
 			int i_239_ = packet.method2233(255);
@@ -1648,18 +1652,18 @@ public class FloatBuffer extends Buffer
 				int i_246_ = -Class320_Sub4.anInt8243 + i_245_;
 				if (Class50.anInt783 == i_242_ && i_244_ >= Class333.anInt4155 && 8 + Class333.anInt4155 > i_244_ && i_246_ >= Node_Sub21.anInt7184 && Node_Sub21.anInt7184 - -8 > i_246_) {
 					node_sub11.method2160((byte) 121);
-					if ((i_244_ ^ 0xffffffff) <= -1 && i_246_ >= 0 && Node_Sub54.anInt7675 > i_244_ && (i_246_ ^ 0xffffffff) > (Class377_Sub1.anInt8774 ^ 0xffffffff)) {
+					if ((~i_244_) <= -1 && i_246_ >= 0 && Node_Sub54.anInt7675 > i_244_ && (~i_246_) > (~Class377_Sub1.anInt8774)) {
 						Node_Sub36.method2750(false, Class50.anInt783, i_246_, i_244_);
 					}
 				}
 			}
 			for (Node_Sub19 node_sub19 = (Node_Sub19) Class89.aClass312_1199.method3613(65280); node_sub19 != null; node_sub19 = (Node_Sub19) Class89.aClass312_1199.method3620(16776960)) {
-				if ((Class333.anInt4155 ^ 0xffffffff) >= (node_sub19.anInt7171 ^ 0xffffffff) && 8 + Class333.anInt4155 > node_sub19.anInt7171 && node_sub19.anInt7161 >= Node_Sub21.anInt7184 && 8 + Node_Sub21.anInt7184 > node_sub19.anInt7161 && Class50.anInt783 == node_sub19.anInt7165) {
+				if ((~Class333.anInt4155) >= (~node_sub19.anInt7171) && 8 + Class333.anInt4155 > node_sub19.anInt7171 && node_sub19.anInt7161 >= Node_Sub21.anInt7184 && 8 + Node_Sub21.anInt7184 > node_sub19.anInt7161 && Class50.anInt783 == node_sub19.anInt7165) {
 					node_sub19.aBoolean7156 = true;
 				}
 			}
 			for (Node_Sub19 node_sub19 = (Node_Sub19) Class262_Sub8.aClass312_7755.method3613(65280); node_sub19 != null; node_sub19 = (Node_Sub19) Class262_Sub8.aClass312_7755.method3620(16776960)) {
-				if (node_sub19.anInt7171 >= Class333.anInt4155 && 8 + Class333.anInt4155 > node_sub19.anInt7171 && (node_sub19.anInt7161 ^ 0xffffffff) <= (Node_Sub21.anInt7184 ^ 0xffffffff) && (8 + Node_Sub21.anInt7184 ^ 0xffffffff) < (node_sub19.anInt7161 ^ 0xffffffff) && node_sub19.anInt7165 == Class50.anInt783) {
+				if (node_sub19.anInt7171 >= Class333.anInt4155 && 8 + Class333.anInt4155 > node_sub19.anInt7171 && (~node_sub19.anInt7161) <= (~Node_Sub21.anInt7184) && (~(8 + Node_Sub21.anInt7184)) < (~node_sub19.anInt7161) && node_sub19.anInt7165 == Class50.anInt783) {
 					node_sub19.aBoolean7156 = true;
 				}
 			}
@@ -1682,7 +1686,7 @@ public class FloatBuffer extends Buffer
 			}
 			int i_249_ = packet.method2233(255);
 			boolean bool_250_ = false;
-			if ((i_249_ ^ 0xffffffff) >= -2) {
+			if ((~i_249_) >= -2) {
 				if (Node_Sub38_Sub18.aBoolean10282 && !Class24.aBoolean436 || Class290_Sub11.aBoolean8175) {
 					bool_250_ = true;
 				} else if (i_249_ <= 1 && Node_Sub6.method2418(-27891, string_248_)) {
@@ -1691,7 +1695,7 @@ public class FloatBuffer extends Buffer
 			}
 			if (!bool_250_ && CacheNode_Sub17.anInt8835 == 0) {
 				String string_251_ = Class67.method730(false, Node_Sub3.method2172((byte) -72, packet));
-				if ((i_249_ ^ 0xffffffff) == -3) {
+				if ((~i_249_) == -3) {
 					Node_Sub50.method2966("<img=1>" + string_248_, "<img=1>" + string, -1, string_251_, null, false, 0, string, 24);
 				} else if (i_249_ != 1) {
 					Node_Sub50.method2966(string_248_, string, -1, string_251_, null, false, 0, string, 24);
@@ -1705,7 +1709,7 @@ public class FloatBuffer extends Buffer
 		if (Class337.aClass192_4180 == class123.aClass192_1576) {
 			int i_252_ = packet.method2219(-130546744);
 			String string = packet.method2195(-1);
-			boolean bool = (packet.method2233(255) ^ 0xffffffff) == -2;
+			boolean bool = (~packet.method2233(255)) == -2;
 			Class382.aBoolean5260 = bool;
 			Class247.aClass197_3115 = Class181.aClass197_2155;
 			Object object = null;
@@ -1715,7 +1719,7 @@ public class FloatBuffer extends Buffer
 			return false;
 		}
 		if (class123.aClass192_1576 == Class262_Sub13.aClass192_7795) {
-			if ((Class320_Sub15.anInt8355 ^ 0xffffffff) != 0) {
+			if ((~Class320_Sub15.anInt8355) != 0) {
 				Class76.method770(121, 0, Class320_Sub15.anInt8355);
 			}
 			class123.aClass192_1576 = null;
@@ -1751,7 +1755,7 @@ public class FloatBuffer extends Buffer
 			Class333.anInt4155 = packet.method2236(-735307888) << 3;
 			Class50.anInt783 = packet.method2211(4255);
 			Node_Sub21.anInt7184 = packet.method2214((byte) -114) << 3;
-			while ((packet.anInt7002 ^ 0xffffffff) > (class123.anInt1581 ^ 0xffffffff)) {
+			while ((~packet.anInt7002) > (~class123.anInt1581)) {
 				Class257 class257 = Packet.method2263(31303)[packet.method2233(255)];
 				Class320_Sub29.method3788(0, class257);
 			}
@@ -1769,7 +1773,7 @@ public class FloatBuffer extends Buffer
 			int i_255_ = (i_253_ & 0xfffeb0d) >> 14;
 			int i_256_ = 0x3fff & i_253_;
 			int i_257_ = packet.method2224(-602457616);
-			if ((i_257_ ^ 0xffffffff) == -65536) {
+			if ((~i_257_) == -65536) {
 				i_257_ = -1;
 			}
 			int i_258_ = packet.method2213((byte) 99);
@@ -1800,7 +1804,7 @@ public class FloatBuffer extends Buffer
 				Class240.aStringArray2949[Class235.anInt5122] = string_263_;
 				Class7.aStringArray164[Class235.anInt5122] = string_264_;
 				DrawableModel.aStringArray911[Class235.anInt5122] = string_265_;
-				CacheNode_Sub4.aBooleanArray9454[Class235.anInt5122] = (Node_Sub30.method2723(2, i_262_) ^ 0xffffffff) == -3;
+				CacheNode_Sub4.aBooleanArray9454[Class235.anInt5122] = (~Node_Sub30.method2723(2, i_262_)) == -3;
 				Class235.anInt5122++;
 			} else {
 				for (int i_266_ = 0; i_266_ < Class235.anInt5122; i_266_++) {
@@ -1827,7 +1831,7 @@ public class FloatBuffer extends Buffer
 			return true;
 		}
 		if (EntityNode_Sub7.aClass192_6008 == class123.aClass192_1576) {
-			boolean bool = (packet.method2233(255) ^ 0xffffffff) == -2;
+			boolean bool = (~packet.method2233(255)) == -2;
 			String string = packet.method2195(-1);
 			String string_268_ = string;
 			if (bool) {
@@ -1836,13 +1840,13 @@ public class FloatBuffer extends Buffer
 			int i_269_ = packet.method2233(255);
 			int i_270_ = packet.method2219(-130546744);
 			boolean bool_271_ = false;
-			if ((i_269_ ^ 0xffffffff) >= -2 && Node_Sub6.method2418(-27891, string_268_)) {
+			if ((~i_269_) >= -2 && Node_Sub6.method2418(-27891, string_268_)) {
 				bool_271_ = true;
 			}
 			if (!bool_271_ && CacheNode_Sub17.anInt8835 == 0) {
 				String string_272_ = Node_Sub36_Sub1.aClass109_10035.method1128(i_270_, false).method2329((byte) -49, packet);
-				if ((i_269_ ^ 0xffffffff) != -3) {
-					if ((i_269_ ^ 0xffffffff) == -2) {
+				if ((~i_269_) != -3) {
+					if ((~i_269_) == -2) {
 						Node_Sub50.method2966("<img=0>" + string_268_, "<img=0>" + string, i_270_, string_272_, null, false, 0, string, 25);
 					} else {
 						Node_Sub50.method2966(string_268_, string, i_270_, string_272_, null, false, 0, string, 25);
@@ -1894,9 +1898,9 @@ public class FloatBuffer extends Buffer
 				class211.aString2504 = string_278_;
 				class211.aByte2503 = b;
 				int i_279_;
-				for (i_279_ = -1 + Node_Sub38_Sub37.anInt10473; (i_279_ ^ 0xffffffff) <= -1; i_279_--) {
+				for (i_279_ = -1 + Node_Sub38_Sub37.anInt10473; (~i_279_) <= -1; i_279_--) {
 					int i_280_ = Class50.aClass211Array782[i_279_].aString2508.compareTo(class211.aString2508);
-					if ((i_280_ ^ 0xffffffff) == -1) {
+					if ((~i_280_) == -1) {
 						Class50.aClass211Array782[i_279_].anInt2505 = i_276_;
 						Class50.aClass211Array782[i_279_].aByte2503 = b;
 						Class50.aClass211Array782[i_279_].aString2504 = string_278_;
@@ -1907,17 +1911,17 @@ public class FloatBuffer extends Buffer
 						class123.aClass192_1576 = null;
 						return true;
 					}
-					if ((i_280_ ^ 0xffffffff) > -1) {
+					if ((~i_280_) > -1) {
 						break;
 					}
 				}
-				if ((Class50.aClass211Array782.length ^ 0xffffffff) >= (Node_Sub38_Sub37.anInt10473 ^ 0xffffffff)) {
+				if ((~Class50.aClass211Array782.length) >= (~Node_Sub38_Sub37.anInt10473)) {
 					class123.aClass192_1576 = null;
 					return true;
 				}
-				for (int i_281_ = Node_Sub38_Sub37.anInt10473 - 1; (i_279_ ^ 0xffffffff) > (i_281_ ^ 0xffffffff); i_281_--)
+				for (int i_281_ = Node_Sub38_Sub37.anInt10473 - 1; (~i_279_) > (~i_281_); i_281_--)
 					Class50.aClass211Array782[i_281_ + 1] = Class50.aClass211Array782[i_281_];
-				if ((Node_Sub38_Sub37.anInt10473 ^ 0xffffffff) == -1) {
+				if ((~Node_Sub38_Sub37.anInt10473) == -1) {
 					Class50.aClass211Array782 = new Class211[100];
 				}
 				Class50.aClass211Array782[i_279_ + 1] = class211;
@@ -1926,19 +1930,19 @@ public class FloatBuffer extends Buffer
 					Class362.aByte4500 = b;
 				}
 			} else {
-				if ((Node_Sub38_Sub37.anInt10473 ^ 0xffffffff) == -1) {
+				if ((~Node_Sub38_Sub37.anInt10473) == -1) {
 					class123.aClass192_1576 = null;
 					return true;
 				}
 				boolean bool_282_ = false;
 				int i_283_;
 				for (i_283_ = 0; Node_Sub38_Sub37.anInt10473 > i_283_; i_283_++) {
-					if (Class50.aClass211Array782[i_283_].aString2506.equals(string_275_) && (i_276_ ^ 0xffffffff) == (Class50.aClass211Array782[i_283_].anInt2505 ^ 0xffffffff)) {
+					if (Class50.aClass211Array782[i_283_].aString2506.equals(string_275_) && (~i_276_) == (~Class50.aClass211Array782[i_283_].anInt2505)) {
 						break;
 					}
 				}
-				if ((i_283_ ^ 0xffffffff) > (Node_Sub38_Sub37.anInt10473 ^ 0xffffffff)) {
-					for (/**/; (-1 + Node_Sub38_Sub37.anInt10473 ^ 0xffffffff) < (i_283_ ^ 0xffffffff); i_283_++)
+				if ((~i_283_) > (~Node_Sub38_Sub37.anInt10473)) {
+					for (/**/; (~(-1 + Node_Sub38_Sub37.anInt10473)) < (~i_283_); i_283_++)
 						Class50.aClass211Array782[i_283_] = Class50.aClass211Array782[i_283_ - -1];
 					Node_Sub38_Sub37.anInt10473--;
 					Class50.aClass211Array782[Node_Sub38_Sub37.anInt10473] = null;
@@ -1962,7 +1966,7 @@ public class FloatBuffer extends Buffer
 		if (Class169_Sub1.aClass192_8785 == class123.aClass192_1576) {
 			int i_286_ = packet.method2219(-130546744);
 			Player player;
-			if ((i_286_ ^ 0xffffffff) != (Class166.anInt5099 ^ 0xffffffff)) {
+			if ((~i_286_) != (~Class166.anInt5099)) {
 				player = Class270_Sub2.aPlayerArray8038[i_286_];
 			} else {
 				player = Class295.aPlayer3692;
@@ -1973,7 +1977,7 @@ public class FloatBuffer extends Buffer
 			}
 			int i_287_ = packet.method2219(-130546744);
 			int i_288_ = packet.method2233(255);
-			boolean bool = (0x8000 & i_287_ ^ 0xffffffff) != -1;
+			boolean bool = (~(0x8000 & i_287_)) != -1;
 			if (player.aString11142 != null && player.aPlayerDefinition11137 != null) {
 				boolean bool_289_ = false;
 				if (i_288_ <= 1) {
@@ -1983,7 +1987,7 @@ public class FloatBuffer extends Buffer
 						bool_289_ = true;
 					}
 				}
-				if (!bool_289_ && (CacheNode_Sub17.anInt8835 ^ 0xffffffff) == -1) {
+				if (!bool_289_ && (~CacheNode_Sub17.anInt8835) == -1) {
 					int i_290_ = -1;
 					String string;
 					if (!bool) {
@@ -1996,7 +2000,7 @@ public class FloatBuffer extends Buffer
 					}
 					player.method882(i_287_ >> 8, 0xff & i_287_, string.trim(), (byte) -95);
 					int i_291_;
-					if ((i_288_ ^ 0xffffffff) != -2 && i_288_ != 2) {
+					if ((~i_288_) != -2 && i_288_ != 2) {
 						i_291_ = !bool ? 2 : 17;
 					} else {
 						i_291_ = !bool ? 1 : 17;
@@ -2017,7 +2021,7 @@ public class FloatBuffer extends Buffer
 		}
 		if (class123.aClass192_1576 == Class13.aClass192_203) {
 			int i_292_ = packet.method2219(-130546744);
-			if ((i_292_ ^ 0xffffffff) == -65536) {
+			if ((~i_292_) == -65536) {
 				i_292_ = -1;
 			}
 			int i_293_ = packet.method2233(255);
@@ -2034,22 +2038,22 @@ public class FloatBuffer extends Buffer
 		}
 		if (Class86.aClass192_1163 == class123.aClass192_1576) {
 			int i_297_ = packet.method2209((byte) -103);
-			if ((i_297_ ^ 0xffffffff) == -65536) {
+			if ((~i_297_) == -65536) {
 				i_297_ = -1;
 			}
 			int i_298_ = packet.method2208(true);
 			int i_299_ = packet.method2224(-602457616);
-			if ((i_299_ ^ 0xffffffff) == -65536) {
+			if ((~i_299_) == -65536) {
 				i_299_ = -1;
 			}
 			int i_300_ = packet.method2176((byte) -120);
 			InputStream_Sub2.method129(-1);
-			for (int i_301_ = i_297_; (i_301_ ^ 0xffffffff) >= (i_299_ ^ 0xffffffff); i_301_++) {
+			for (int i_301_ = i_297_; (~i_301_) >= (~i_299_); i_301_++) {
 				long l = (long) i_301_ + ((long) i_298_ << 32);
 				Node_Sub35 node_sub35 = (Node_Sub35) Class156.aHashTable1964.method1518(3512, l);
 				Node_Sub35 node_sub35_302_;
 				if (node_sub35 == null) {
-					if ((i_301_ ^ 0xffffffff) == 0) {
+					if ((~i_301_) == 0) {
 						node_sub35_302_ = new Node_Sub35(i_300_, Class76.method771((byte) 107, i_298_).aNode_Sub35_4840.anInt7413);
 					} else {
 						node_sub35_302_ = new Node_Sub35(i_300_, -1);
@@ -2103,7 +2107,7 @@ public class FloatBuffer extends Buffer
 		}
 		if (Class217.aClass192_2553 == class123.aClass192_1576) {
 			Class56.anInt837 = packet.method2229((byte) 86);
-			Node_Sub38_Sub18.aBoolean10282 = (packet.method2233(255) ^ 0xffffffff) == -2;
+			Node_Sub38_Sub18.aBoolean10282 = (~packet.method2233(255)) == -2;
 			class123.aClass192_1576 = null;
 			return true;
 		}
@@ -2147,7 +2151,7 @@ public class FloatBuffer extends Buffer
 		if (class123.aClass192_1576 == Class63.aClass192_924) {
 			int i_314_ = packet.method2209((byte) -107);
 			int i_315_ = packet.method2238(true);
-			boolean bool = (i_315_ & 0x1 ^ 0xffffffff) == -2;
+			boolean bool = (~(i_315_ & 0x1)) == -2;
 			Class370.method4090(bool, i_314_, 0);
 			Class169.anIntArray4965[Node_Sub30.method2723(Mobile_Sub3.anInt10784++, 31)] = i_314_;
 			class123.aClass192_1576 = null;
@@ -2176,7 +2180,7 @@ public class FloatBuffer extends Buffer
 		}
 		if (class123.aClass192_1576 == Mobile_Sub3.aClass192_10778) {
 			Node_Sub36_Sub2.anInt10046 = Class345.anInt4270;
-			if ((class123.anInt1581 ^ 0xffffffff) == -1) {
+			if ((~class123.anInt1581) == -1) {
 				class123.aClass192_1576 = null;
 				Node_Sub38_Sub37.anInt10473 = 0;
 				Class50.aClass211Array782 = null;
@@ -2185,7 +2189,7 @@ public class FloatBuffer extends Buffer
 				return true;
 			}
 			Class88.aString5274 = packet.method2195(-1);
-			boolean bool = (packet.method2233(255) ^ 0xffffffff) == -2;
+			boolean bool = (~packet.method2233(255)) == -2;
 			if (bool) {
 				packet.method2195(-1);
 			}
@@ -2193,16 +2197,16 @@ public class FloatBuffer extends Buffer
 			Class169_Sub4.aString8830 = Class154.method1699(l, 25589);
 			Node_Sub38_Sub34.aByte10445 = packet.method2214((byte) 17);
 			int i_321_ = packet.method2233(255);
-			if ((i_321_ ^ 0xffffffff) == -256) {
+			if ((~i_321_) == -256) {
 				class123.aClass192_1576 = null;
 				return true;
 			}
 			Node_Sub38_Sub37.anInt10473 = i_321_;
 			Class211[] class211s = new Class211[100];
-			for (int i_322_ = 0; (i_322_ ^ 0xffffffff) > (Node_Sub38_Sub37.anInt10473 ^ 0xffffffff); i_322_++) {
+			for (int i_322_ = 0; (~i_322_) > (~Node_Sub38_Sub37.anInt10473); i_322_++) {
 				class211s[i_322_] = new Class211();
 				class211s[i_322_].aString2507 = packet.method2195(-1);
-				bool = (packet.method2233(255) ^ 0xffffffff) == -2;
+				bool = (~packet.method2233(255)) == -2;
 				if (bool) {
 					class211s[i_322_].aString2506 = packet.method2195(-1);
 				} else {
@@ -2218,10 +2222,10 @@ public class FloatBuffer extends Buffer
 			}
 			boolean bool_323_ = false;
 			int i_324_ = Node_Sub38_Sub37.anInt10473;
-			while ((i_324_ ^ 0xffffffff) < -1) {
+			while ((~i_324_) < -1) {
 				bool_323_ = true;
 				i_324_--;
-				for (int i_325_ = 0; (i_325_ ^ 0xffffffff) > (i_324_ ^ 0xffffffff); i_325_++) {
+				for (int i_325_ = 0; (~i_325_) > (~i_324_); i_325_++) {
 					if (class211s[i_325_].aString2508.compareTo(class211s[i_325_ - -1].aString2508) > 0) {
 						Class211 class211 = class211s[i_325_];
 						class211s[i_325_] = class211s[i_325_ + 1];
@@ -2270,7 +2274,7 @@ public class FloatBuffer extends Buffer
 			return true;
 		}
 		if (class123.aClass192_1576 == Node_Sub38_Sub28.aClass192_10402) {
-			boolean bool = (packet.method2233(255) ^ 0xffffffff) == -2;
+			boolean bool = (~packet.method2233(255)) == -2;
 			String string = packet.method2195(-1);
 			String string_329_ = string;
 			if (bool) {
@@ -2284,8 +2288,8 @@ public class FloatBuffer extends Buffer
 			boolean bool_334_ = false;
 		while_87_:
 			do {
-				for (int i_335_ = 0; (i_335_ ^ 0xffffffff) > -101; i_335_++) {
-					if ((Class320_Sub22.aLongArray8423[i_335_] ^ 0xffffffffffffffffL) == (l_333_ ^ 0xffffffffffffffffL)) {
+				for (int i_335_ = 0; (~i_335_) > -101; i_335_++) {
+					if ((~Class320_Sub22.aLongArray8423[i_335_]) == (~l_333_)) {
 						bool_334_ = true;
 						break while_87_;
 					}
@@ -2302,7 +2306,7 @@ public class FloatBuffer extends Buffer
 				Class320_Sub22.aLongArray8423[Class53.anInt807] = l_333_;
 				Class53.anInt807 = (Class53.anInt807 + 1) % 100;
 				String string_336_ = Class67.method730(false, Node_Sub3.method2172((byte) -72, packet));
-				if (i_332_ == 2 || (i_332_ ^ 0xffffffff) == -4) {
+				if (i_332_ == 2 || (~i_332_) == -4) {
 					Node_Sub50.method2966("<img=1>" + string_329_, "<img=1>" + string, -1, string_336_, CacheNode_Sub6.method2313((byte) -40, l), false, 0, string, 9);
 				} else if (i_332_ != 1) {
 					Node_Sub50.method2966(string_329_, string, -1, string_336_, CacheNode_Sub6.method2313((byte) -29, l), false, 0, string, 9);
@@ -2329,10 +2333,10 @@ public class FloatBuffer extends Buffer
 		node_sub13.aClass318_7109 = class318;
 		if (node_sub13.anInt7110 == -1) {
 			node_sub13.aPacket7113 = new Packet(260);
-		} else if ((node_sub13.anInt7110 ^ 0xffffffff) != 1) {
+		} else if ((~node_sub13.anInt7110) != 1) {
 			if (node_sub13.anInt7110 <= 18) {
 				node_sub13.aPacket7113 = new Packet(20);
-			} else if ((node_sub13.anInt7110 ^ 0xffffffff) >= -99) {
+			} else if ((~node_sub13.anInt7110) >= -99) {
 				node_sub13.aPacket7113 = new Packet(100);
 			} else {
 				node_sub13.aPacket7113 = new Packet(260);

@@ -9,7 +9,7 @@ public class Class188_Sub1_Sub1 extends Class188_Sub1
 	static float[] aFloatArray9331 = { 0.0F, -1.0F, 0.0F, 0.0F };
 	static int anInt9332;
 	static int anInt9333;
-	static byte[][] aByteArrayArray9334;
+	static byte[][] mapsArray;
 	private byte[] aByteArray9335;
 	static int anInt9336;
 	static int anInt9337;
@@ -31,7 +31,7 @@ public class Class188_Sub1_Sub1 extends Class188_Sub1
 	}
 	
 	public static void method1893(int i) {
-		aByteArrayArray9334 = null;
+		mapsArray = null;
 		aFloatArray9331 = null;
 		if (i == 2) {
 			aString9327 = null;
